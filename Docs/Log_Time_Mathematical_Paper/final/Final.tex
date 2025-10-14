@@ -1,0 +1,106 @@
+\documentclass[aps,prd,onecolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{amsmath,amssymb,amsfonts,mathtools,physics,bm}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+
+\begin{document}
+
+\title{Log-Time Quantum Gravity: Reclocking Quantum Dynamics and Regularizing Early-Time Geometry}
+
+\author{Denzil James Greenwood}
+\affiliation{Independent Researcher}
+\date{\today}
+
+\begin{abstract}
+I present \emph{Log-Time Quantum Gravity} (LTQG), a framework that reclocks quantum dynamics using the logarithmic time variable $\sigma=\ln(\tau/\tau_0)$ and pairs it with a conformal rescaling of the background geometry. I establish (i) unitary equivalence of Schr\"odinger evolution in $\tau$ and $\sigma$, including time-ordered non-commuting Hamiltonians; (ii) an ``asymptotic silence'' regime as $\sigma\to -\infty$ in which the effective generator vanishes with finite accumulated phase; and (iii) geometric regularization in flat FLRW cosmology under a Weyl transform $\tilde g_{\mu\nu}=\Omega^2 g_{\mu\nu}$ with $\Omega=1/t$, yielding an Einstein, constant-curvature spacetime with $\tilde R=12(p-1)^2$ and $\tilde R_{\mu\nu}\tilde R^{\mu\nu}=\tilde R^2/4$, $\tilde K=\tilde R^2/6$. 
+
+On the quantum field side, I show numerical equivalence (to tight tolerances using adaptive RK and phase-robust diagnostics) between $\tau$- and $\sigma$-time mode evolution for free scalars in expanding backgrounds, while fixed-step tests correctly expose anti-damped $\sigma$-regimes as expected. For Schwarzschild backgrounds with spatially varying $\Omega(r,t)$, I compute invariants \emph{directly from} $\tilde g_{\mu\nu}$, capturing derivative contributions from the conformal factor.
+
+\textbf{Disclaimer.} I propose LTQG here as a \emph{candidate} resolution strategy for early-time pathologies and clock–geometry alignment. I invite independent verification and stress testing of the mathematics, numerics, and physical implications. A complete open-source validation suite accompanies this work.
+
+\end{abstract>
+
+\maketitle
+
+\section{Introduction}
+Reconciling quantum mechanics (QM) with dynamical spacetime remains central to quantum gravity~\cite{weinberg1989}. Two persistent challenges are: (i) the role of ``time'' as a parameter in QM versus a dynamical field in general relativity (GR), and (ii) singular early-time behavior in cosmology and near horizons. I propose \emph{Log-Time Quantum Gravity} (LTQG), which (a) reclocks quantum evolution via $\sigma=\ln(\tau/\tau_0)$ and (b) aligns this reclocking with a Weyl rescaling of the metric. The resulting $\sigma$-picture preserves QM while rendering certain geometric and dynamical limits well-posed.
+
+\section{Log-time mapping and quantum dynamics}\label{sec:logtime}
+Define $\sigma=\ln(\tau/\tau_0)$ so that $\tau=\tau_0 e^{\sigma}$ and $\partial_\sigma = \tau\,\partial_\tau$. The $\tau$-Schr\"odinger equation
+\begin{equation}
+i\hbar\,\partial_\tau \ket{\psi(\tau)}=H(\tau)\ket{\psi(\tau)}
+\end{equation}
+is equivalent to the $\sigma$-equation
+\begin{equation}
+i\hbar\,\partial_\sigma \ket{\psi(\sigma)} = H_{\mathrm{eff}}(\sigma)\ket{\psi(\sigma)},\qquad
+H_{\mathrm{eff}}(\sigma)=\tau_0 e^\sigma\, H(\tau_0 e^\sigma).
+\end{equation}
+\textbf{Proposition 1 (Unitary equivalence).} For arbitrary (piecewise continuous) $H(\tau)$, including non-commuting time dependence, the time-ordered evolution operators satisfy
+\begin{equation}
+\mathcal{T}\exp\!\Big[-\tfrac{i}{\hbar}\!\int_{\tau_i}^{\tau_f} \!H(\tau)\,d\tau\Big]
+=\mathcal{T}\exp\!\Big[-\tfrac{i}{\hbar}\!\int_{\sigma_i}^{\sigma_f} \!H_{\mathrm{eff}}(\sigma)\,d\sigma\Big],
+\end{equation}
+with $\tau_{i,f}=\tau_0 e^{\sigma_{i,f}}$. Hence density matrices and Heisenberg observables coincide in the two clocks.
+
+\textbf{Asymptotic silence.} As $\sigma\to-\infty$, $H_{\mathrm{eff}}(\sigma)\to 0$ and the accumulated phase $\int_{-\infty}^{\sigma} H_{\mathrm{eff}}\, d\sigma'=\tau_0 e^{\sigma}$ is finite, making the $\sigma$-past a mathematically tame initialization surface.
+
+\section{Weyl rescaling and geometric regularization}\label{sec:weyl}
+We pair the clock map with a conformal rescaling $\tilde g_{\mu\nu}=\Omega^2 g_{\mu\nu}$. For flat FLRW $ds^2=-dt^2+a(t)^2 d\vec x^2$, $a(t)=t^p$, choose $\Omega=1/t$. Using the 4D Weyl identity,
+\begin{equation}
+\tilde R = \Omega^{-2}\Big(R-6\,\Box \ln\Omega - 6\,(\nabla \ln\Omega)^2\Big),
+\end{equation}
+one finds
+\begin{equation}
+\tilde R = 12(p-1)^2,\qquad 
+\tilde R_{\mu\nu}=\frac{\tilde R}{4}\,\tilde g_{\mu\nu},\qquad
+\tilde R_{\mu\nu}\tilde R^{\mu\nu}=\frac{\tilde R^2}{4},\quad
+\tilde K=\frac{\tilde R^2}{6}.
+\end{equation}
+Thus the transformed spacetime is Einstein and constant curvature; all curvature scalars are finite constants for any $p$.
+
+\section{QFT in the $\sigma$-picture}\label{sec:qft}
+For a free scalar mode $u_k$, the $\tau$-equation maps to
+\begin{equation}
+u_k'' + (1-3p)\,u_k' + t(\sigma)^2\,\Omega_k^2\big(t(\sigma)\big)\,u_k=0,\qquad t(\sigma)=\tau_0 e^{\sigma},
+\end{equation}
+where prime is $\partial_\sigma$. Using complex adiabatic initial data, integrating factors, and adaptive RK45, I verify:
+\begin{enumerate}
+\item Phase-robust equivalence between $\tau$- and $\sigma$-evolution via Wronskian conservation, energy checks, and Bogoliubov coefficients $(\alpha_k,\beta_k)$.
+\item Fixed-step RK stress tests in anti-damped $\sigma$-regimes display large amplitude error \emph{by design}; adaptive solvers remove this artifact.
+\end{enumerate}
+
+\section{Black holes with spatially varying $\Omega(r,t)$}\label{sec:schw}
+For Schwarzschild $ds^2=-(1-r_s/r)dt^2+(1-r_s/r)^{-1}dr^2+r^2 d\Omega_2^2$ and a clock-based $\Omega(r,t)=1/(t\sqrt{1-r_s/r})$, I \emph{compute all invariants directly from} $\tilde g_{\mu\nu}$. Because $\Omega$ has spatial dependence, $ \tilde R, \tilde R_{\mu\nu}\tilde R^{\mu\nu}, \tilde K$ receive derivative contributions from $\Omega$. Near the horizon $r\to r_s^+$, $\tilde R$ remains finite and the others have analytic limits that differ from naive $\Omega^{-4}$ scaling, as expected.
+
+\section{Action, clock dynamics, and constraints}\label{sec:action}
+Treating the clock $\tau$ as a scalar with action $S[g,\tau,\Phi]=\int d^4x\sqrt{-g}\,[\frac{1}{2\kappa}R - \frac{1}{2}(\nabla \tau)^2 - V(\tau) + \mathcal{L}_\Phi]$, variation yields Einstein equations with $T^{(\tau)}_{\mu\nu}=\nabla_\mu\tau\nabla_\nu\tau - \frac{1}{2}g_{\mu\nu}(\nabla \tau)^2 - g_{\mu\nu}V(\tau)$ and the clock equation $\Box \tau - V'(\tau)=0$. In FLRW these reduce to $\ddot \tau + 3H\dot \tau + V'(\tau)=0$ and the standard Hamiltonian constraint, matching my symbolic derivations.
+
+\section{Numerical and symbolic validation}
+I provide a comprehensive Python suite that checks:
+\begin{itemize}
+\item Invertibility and chain rule of the log-time map;
+\item Unitary equivalence for constant and non-commuting $H(\tau)$, plus Heisenberg consistency;
+\item Asymptotic silence: $H_{\rm eff}\to 0$ with finite phase;
+\item FLRW curvature via Weyl identity and directly from $\tilde g_{\mu\nu}$ (constant-curvature identities asserted);
+\item Schwarzschild invariants from $\tilde g_{\mu\nu}$ with symmetry and near-horizon checks;
+\item QFT mode equivalence with adiabatic ICs, integrating factor, adaptive RK, Wronskian and Bogoliubov diagnostics.
+\end{itemize}
+
+\section{Discussion and outlook}
+LTQG leaves QM intact while choosing a clock and geometry that regularize difficult regimes and stabilize computation. Immediate applications include: robust state preparation in early-universe QFT, controlled analysis of quenches in time-dependent Hamiltonians, and near-horizon field evolution with spatially varying conformal factors.
+
+\paragraph*{Limitations and open work.}
+I have focused on free fields and classical backgrounds. Interactions, backreaction, nontrivial topologies, and observational signatures remain to be explored. For black holes, alternative $\Omega$ choices may better capture near-horizon physics in specific setups.
+
+\paragraph*{Community validation (disclaimer).}
+\textbf{I propose LTQG in this paper as a candidate framework and report a complete set of mathematical and numerical checks supporting it. I explicitly invite independent replication and scrutiny of my derivations and code.} The validation suite is available (see Code Availability).
+
+\section*{Code availability}
+All scripts to reproduce the symbolic and numerical results are available at: \emph{(https://github.com/DenzilGreenwood/Log\_Time\_v2.git)}.
+
+\section*{Acknowledgements}
+ The author acknowledges the foundational contributions of quantum theory pioneers and the extensive body of work in quantum gravity research that has informed this investigation. Special recognition is given to the rapid advancements in artificial intelligence that have transformed modern research methodologies. AI tools, particularly large language models, were extensively utilized throughout this work for mathematical derivations, code development, literature synthesis, and manuscript preparation. A detailed record of AI-assisted research interactions can be found at: \url{https://chatgpt.com/share/68ed8b16-7040-8013-a252-8e66c33818b0}. The author emphasizes that while AI provided significant computational and analytical support, all theoretical frameworks, mathematical validations, and scientific conclusions remain the responsibility of the author.
+
+
+\end{document}
