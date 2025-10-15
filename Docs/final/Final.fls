@@ -1,8 +1,8 @@
-PWD d:/Log_Time_v2/Docs/Log_Time_Mathematical_Paper/final
+PWD d:/Log_Time_v2/Docs/final
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Log_Time_v2/Docs/Log_Time_Mathematical_Paper/final/Final.tex
+INPUT d:/Log_Time_v2/Docs/final/Final.tex
 OUTPUT Final.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/revtex/revtex4-2.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/revtex/revtex4-2.cls
@@ -234,7 +234,6 @@ INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb

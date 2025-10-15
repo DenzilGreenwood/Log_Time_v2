@@ -1,0 +1,15 @@
+# LTQG Framework Dependencies
+# Core computational dependencies for Log-Time Quantum Gravity framework
+# Tested with Python 3.12.8
+
+# Essential dependencies
+numpy>=2.0.0        # Array operations, linear algebra
+scipy>=1.10.0       # ODE integration, special functions  
+sympy>=1.12.0       # Symbolic mathematics, exact calculations
+
+# Optional dependencies for visualization (used in notebooks)
+matplotlib>=3.4.0   # Scientific plots, publication figures
+
+# Development and testing dependencies (optional)
+# jupyter>=1.0.0    # For running demonstration notebooks
+# pytest>=6.0.0     # For unit testing (when test files are available)

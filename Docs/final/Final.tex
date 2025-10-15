@@ -19,7 +19,7 @@ On the quantum field side, I show numerical equivalence (to tight tolerances usi
 
 \textbf{Disclaimer.} I propose LTQG here as a \emph{candidate} resolution strategy for early-time pathologies and clock–geometry alignment. I invite independent verification and stress testing of the mathematics, numerics, and physical implications. A complete open-source validation suite accompanies this work.
 
-\end{abstract>
+\end{abstract}
 
 \maketitle
 
@@ -48,7 +48,7 @@ with $\tau_{i,f}=\tau_0 e^{\sigma_{i,f}}$. Hence density matrices and Heisenberg
 \section{Weyl rescaling and geometric regularization}\label{sec:weyl}
 We pair the clock map with a conformal rescaling $\tilde g_{\mu\nu}=\Omega^2 g_{\mu\nu}$. For flat FLRW $ds^2=-dt^2+a(t)^2 d\vec x^2$, $a(t)=t^p$, choose $\Omega=1/t$. Using the 4D Weyl identity,
 \begin{equation}
-\tilde R = \Omega^{-2}\Big(R-6\,\Box \ln\Omega - 6\,(\nabla \ln\Omega)^2\Big),
+\tilde R = \Omega^{-2}\Big(R-6\\, \ln\Omega - 6\\,(\nabla \ln\Omega)^2\Big),
 \end{equation}
 one finds
 \begin{equation}
@@ -74,7 +74,7 @@ where prime is $\partial_\sigma$. Using complex adiabatic initial data, integrat
 For Schwarzschild $ds^2=-(1-r_s/r)dt^2+(1-r_s/r)^{-1}dr^2+r^2 d\Omega_2^2$ and a clock-based $\Omega(r,t)=1/(t\sqrt{1-r_s/r})$, I \emph{compute all invariants directly from} $\tilde g_{\mu\nu}$. Because $\Omega$ has spatial dependence, $ \tilde R, \tilde R_{\mu\nu}\tilde R^{\mu\nu}, \tilde K$ receive derivative contributions from $\Omega$. Near the horizon $r\to r_s^+$, $\tilde R$ remains finite and the others have analytic limits that differ from naive $\Omega^{-4}$ scaling, as expected.
 
 \section{Action, clock dynamics, and constraints}\label{sec:action}
-Treating the clock $\tau$ as a scalar with action $S[g,\tau,\Phi]=\int d^4x\sqrt{-g}\,[\frac{1}{2\kappa}R - \frac{1}{2}(\nabla \tau)^2 - V(\tau) + \mathcal{L}_\Phi]$, variation yields Einstein equations with $T^{(\tau)}_{\mu\nu}=\nabla_\mu\tau\nabla_\nu\tau - \frac{1}{2}g_{\mu\nu}(\nabla \tau)^2 - g_{\mu\nu}V(\tau)$ and the clock equation $\Box \tau - V'(\tau)=0$. In FLRW these reduce to $\ddot \tau + 3H\dot \tau + V'(\tau)=0$ and the standard Hamiltonian constraint, matching my symbolic derivations.
+Treating the clock $\tau$ as a scalar with action $S[g,\tau,\Phi]=\int d^4x\sqrt{-g}\,[\frac{1}{2\kappa}R - \frac{1}{2}(\nabla \tau)^2 - V(\tau) + \mathcal{L}_\Phi]$, variation yields Einstein equations with $T^{(\tau)}_{\mu\nu}=\nabla_\mu\tau\nabla_\nu\tau - \frac{1}{2}g_{\mu\nu}(\nabla \tau)^2 - g_{\mu\nu}V(\tau)$ and the clock equation $\tau - V'(\tau)=0$. In FLRW these reduce to $\ddot \tau + 3H\dot \tau + V'(\tau)=0$ and the standard Hamiltonian constraint, matching my symbolic derivations.
 
 \section{Numerical and symbolic validation}
 I provide a comprehensive Python suite that checks:

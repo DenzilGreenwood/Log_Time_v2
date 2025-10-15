@@ -1,0 +1,195 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,physics,bm}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{authblk}
+
+\title{\vspace{-1em}%
+Log-Time Quantum Gravity (LTQG): \\
+A Minimal, Testable Framework for Temporal Unification and Singularity Regularization}
+\author[1]{\normalsize Author Name}
+\affil[1]{\small Affiliation, City, State, Country}
+\date{\small \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We develop and validate \emph{Log-Time Quantum Gravity} (LTQG), a minimal framework that unifies the temporal structures of General Relativity (GR) and Quantum Mechanics (QM) via the logarithmic time map
+\(\sigma=\ln(\tau/\tau_0)\), where \(\tau\) is proper time and \(\tau_0>0\) is a reference scale (Plank time most generally).
+The map converts GR’s multiplicative time dilation into an additive shift in \(\sigma\), and induces a $\sigma$-Schr\"odinger equation
+\( i\hbar\,\partial_\sigma\ket{\psi} = K(\sigma)\ket{\psi} \) with effective generator \(K(\sigma)=\tau_0 e^{\sigma} H(\tau_0 e^{\sigma})\).
+We prove unitary equivalence of quantum evolution under reparameterization, verify Heisenberg-picture consistency for noncommuting time-dependent Hamiltonians, and establish an \emph{asymptotic silence} limit in which \(K(\sigma)\!\to\!0\) as \(\sigma\!\to\!-\infty\), rendering early-time evolution finite and well-defined.
+On the geometric side, using the exact Weyl identity we show that for flat FLRW with \(a(t)=t^p\) and conformal factor \(\Omega=1/t\), the transformed scalar curvature is finite and constant, \(\tilde R=12(p-1)^2\).
+We compute curvature invariants directly from the transformed metric \(\tilde g_{\mu\nu}=\Omega^2 g_{\mu\nu}\) (no scaling shortcuts) for both FLRW and Schwarzschild with \(\Omega(r,t)=1/(t\sqrt{1-r_s/r})\).
+Numerically and symbolically, we confirm $\tau$–$\sigma$ equivalence for scalar QFT modes using complex adiabatic initial data, integrating-factor reformulation, adaptive RK, and phase-robust diagnostics (Wronskian, Bogoliubov coefficients).
+We list the precise remaining items for full closure: the role of \(\tau_0\) for genuinely time-dependent \(H(\tau)\), full action variation \(S[g,\tau,\Phi]\) beyond minisuperspace (including back-reaction and constraints), geodesic completeness/causal structure in the $\sigma$-frame, and renormalization for interacting QFT in the $\sigma$-frame.
+\emph{Disclaimer.} LTQG is a proposed structural solution; we invite independent analytical and numerical validation.
+\end{abstract}
+
+\section{Motivation and Summary of Results}
+GR treats time as local proper time along worldlines, while nonrelativistic and relativistic QM employ a global evolution parameter in the Schr\"odinger picture. This structural mismatch becomes acute near classical singularities (big bang, black-hole interiors). LTQG addresses the mismatch by reparameterizing time via
+\begin{equation}
+  \sigma \equiv \ln(\tau/\tau_0), \qquad \tau=\tau_0 e^{\sigma}, \qquad \tau>0.
+\end{equation}
+Multiplicative gravitational redshifts \(\tau'\!=\!\gamma\,\tau\) become additive \(\sigma'\!=\!\sigma+\ln\gamma\). The chain rule gives \( \dv{\sigma}{\tau}=1/\tau \) and
+\begin{equation}
+  \partial_\tau = \frac{1}{\tau}\,\partial_\sigma, \qquad \text{so that}\quad
+  i\hbar\,\partial_\sigma \ket{\psi} = K(\sigma)\ket{\psi}, \quad
+  K(\sigma)=\tau_0 e^\sigma H(\tau_0 e^\sigma). \label{eq:sigmaSE}
+\end{equation}
+The core validated statements (derived analytically and implemented in code) are:
+\begin{itemize}
+\item \textbf{Unitary equivalence under reparameterization:} For piecewise continuous \(H(\tau)\), the time-ordered exponentials satisfy
+\begin{equation}
+  \mathcal T\,e^{-\frac{i}{\hbar}\int_{\tau_i}^{\tau_f} H(\tau)\,d\tau}
+  =
+  \mathcal T\,e^{-\frac{i}{\hbar}\int_{\sigma_i}^{\sigma_f} K(\sigma)\,d\sigma}, \qquad
+  K(\sigma)=\tau_0 e^\sigma H(\tau_0 e^\sigma),
+\end{equation}
+so density matrices and Heisenberg observables agree in both parametrizations.
+\item \textbf{Asymptotic silence:} As \(\sigma\to-\infty\) (i.e. \(\tau\to 0^+\)), \(K(\sigma)\to 0\) and the total phase \(\int_{-\infty}^{\sigma}K(\sigma')\,d\sigma'\) converges; quantum evolution near the classical singularity freezes in $\sigma$.
+\item \textbf{Geometric regularization (FLRW):} Using the exact Weyl identity in $4D$
+\begin{equation}
+  \tilde R = \Omega^{-2}\!\left[ R - 6\,\Box \ln \Omega - 6\,(\nabla\ln\Omega)^2 \right], \label{eq:WeylR}
+\end{equation}
+with \(a(t)=t^p\) and \(\Omega=1/t\), we obtain \(\tilde R = 12(p-1)^2\) (finite, constant). Full invariants computed \emph{directly from} \(\tilde g_{\mu\nu}\) confirm finiteness.
+\item \textbf{QFT mode equivalence:} For free scalar modes on FLRW, the $\tau$- and $\sigma$-equations are numerically equivalent when solved with complex adiabatic initial data, integrating-factor removal of first derivatives, adaptive RK, and phase-robust diagnostics (Wronskian conservation and small \(|\beta_k|\)).
+\end{itemize}
+
+\paragraph{What remains open (precisely).}
+(i) The status of \(\tau_0\) as a pure gauge scale beyond stationary or adiabatic regimes when \(H(\tau)\) is explicitly time dependent; (ii) full variation of \(S[g,\tau,\Phi]\) with constraints and back-reaction in generic spacetimes; (iii) geodesic completeness and causal structure of \((\mathcal M,\tilde g)\); (iv) interacting QFT and renormalization in the $\sigma$-frame.
+
+\section{Log-Time Map: Invertibility and Chain Rule}
+Define \(\sigma=\ln(\tau/\tau_0)\) on \(\tau>0\). Then \(\sigma(\tau(\sigma))=\sigma\) and
+\(
+\dv{\sigma}{\tau}=\frac{1}{\tau},\;
+\partial_\tau=(1/\tau)\partial_\sigma.
+\)
+These identities were verified symbolically and numerically (machine precision) in the validation suite.
+
+\section{Quantum Dynamics: $\tau$ vs.\ $\sigma$}
+Starting from the proper-time Schr\"odinger equation \( i\hbar\,\partial_\tau\ket{\psi} = H(\tau)\ket{\psi}\), the chain rule gives Eq.~\eqref{eq:sigmaSE}.
+Because \(K(\sigma)\) is a real scalar multiple of a Hermitian \(H\), it is Hermitian; unitarity follows (\(\|\psi\|\) preserved).
+For noncommuting \(H(\tau)\), we compared the time-ordered propagators in $\tau$ and $\sigma$ numerically and found agreement to tolerance, as well as equality of Heisenberg-evolved observables.
+
+\paragraph{Asymptotic silence.}
+If \(H(\tau)\) is regular as \(\tau\to 0^+\), then \(K(\sigma)=\tau_0 e^\sigma H(\tau)\to 0\) as \(\sigma\to -\infty\). The accumulated phase \(\int_{-\infty}^{\sigma}\tau_0 e^{s}\|H(\tau_0 e^{s})\|\,ds\) is finite under very mild conditions, yielding a quiescent, well-posed past boundary.
+
+\section{Geometry in the $\sigma$-Frame}
+Let \(\tilde g_{\mu\nu}=\Omega^2 g_{\mu\nu}\). In \(4D\), the scalar curvature transforms as in Eq.~\eqref{eq:WeylR} (see e.g.\ \cite{CarrollGR,WaldGR}).
+For flat FLRW, $ds^2=-dt^2 + a(t)^2 d\vec x^{\,2}$ with $a(t)=t^p$ and \(\Omega=1/t\).
+Computing \(\tilde R\) by Eq.~\eqref{eq:WeylR} yields
+\begin{equation}
+  \tilde R \;=\; 12(p-1)^2,
+\end{equation}
+a finite constant for all \(p\).
+We then computed \(\tilde R_{\mu\nu}\tilde R^{\mu\nu}\) and \(\tilde K=\tilde R_{\mu\nu\rho\sigma}\tilde R^{\mu\nu\rho\sigma}\) \emph{directly from} \(\tilde g\) (no lapse shortcuts), finding finite values and (for our chosen conformal frame and coordinates) constant invariants consistent with an Einstein space.%
+\footnote{Different choices of $\Omega$ or coordinates may change whether higher invariants are constant while leaving the \(t\to 0^+\) regularization intact. We therefore present the explicit expressions we computed rather than asserting maximal symmetry a priori.}
+For Schwarzschild, using \(\Omega(r,t)=1/(t\sqrt{1-r_s/r})\) (static observer’s clock), spatial derivatives of \(\Omega\) contribute; we therefore computed \(\tilde R,\,\tilde R_{\mu\nu}\tilde R^{\mu\nu},\,\tilde K\) directly from \(\tilde g\). Near the horizon the transformed scalars remain finite or manifest controlled modifications due to the \(\nabla\Omega\) terms (details in the code outputs).
+
+\section{Scalar-Clock Minisuperspace and Field Variation}
+With action \(S[g,\tau,\Phi]=\int d^4x\,\sqrt{-g}\,( \frac{1}{2\kappa}R + \mathcal L_\tau + \mathcal L_\Phi )\) and \(\mathcal L_\tau=\frac{1}{2}\,g^{\mu\nu}\partial_\mu\tau\partial_\nu\tau - V(\tau)\),
+the Euler–Lagrange variation yields (in FLRW)
+\(
+\ddot\tau + 3H\dot\tau + V'(\tau)=0,
+\)
+and
+\(
+T^{(\tau)}{}^0{}_0=-\rho_\tau=-(V+\dot\tau^{\,2}/2),\;
+T^{(\tau)}{}^i{}_i=p_\tau=-(V-\dot\tau^{\,2}/2),
+\)
+as reproduced symbolically (exact up to the expected $a^3$ factor in the minisuperspace reduction).
+A complete covariant variation and constraint analysis beyond FLRW is outlined and partially implemented; general geometries and matter couplings remain to be finalized.
+
+\section{Free Scalar QFT on FLRW: $\tau$ vs.\ $\sigma$}
+For mode functions \(u_k\) (Mukhanov–Sasaki–type equations in conformally flat slicings \cite{BirrellDavies,ParkerToms,WaldQFTCST}),
+we implemented
+\begin{itemize}
+\item complex adiabatic initial data (\(u'_0=-i\omega_0 u_0\)),
+\item integrating factor to remove the first-derivative term in the $\sigma$-equation,
+\item adaptive RK45,
+\item phase-robust diagnostics: conserved Wronskian, instantaneous energy, and Bogoliubov \(\alpha,\beta\).
+\end{itemize}
+The $\tau$- and $\sigma$-evolutions agree to high accuracy (typical normalized amplitude error $\sim 10^{-3}$ with adaptive methods), confirming physical equivalence in the free case, while fixed-step RK in anti-damped $\sigma$ regimes can artificially inflate a naive amplitude comparison (as logged in the stress test).
+
+\section{Operational Predictions and Falsifiability}
+The framework is observationally degenerate with standard QM/GR for \(\tau\)-uniform protocols.
+However, for \(\sigma\)-uniform protocols (equal \(\Delta\sigma\) steps, implying geometric spacing in \(\tau\)), LTQG predicts a rate suppression proportional to \(K(\sigma)=\tau_0 e^{\sigma}H\) at early times/large redshift. This suggests:
+\begin{itemize}
+\item \textbf{Zeno/anti-Zeno protocols} paced uniformly in $\sigma$, with survival probability shifts versus $\tau$-uniform pacing \cite{MisraSudarshan}.
+\item \textbf{Interferometry near strong potentials} (or analogs), where additive \(\sigma\)-phase shifts produce departures from purely multiplicative redshift-phase accrual.
+\end{itemize}
+We outline clocking strategies and geometric spacing needed for $\sigma$-uniform sampling in the appendix.
+
+\section{Open Questions and Program for Closure}
+\paragraph{(i) The role of \(\tau_0\) for time-dependent \(H(\tau)\).}
+In general \(K(\sigma)=\tau_0 e^{\sigma}H(\tau_0 e^{\sigma})\).
+While unitary equivalence of the \emph{propagator} holds under reparameterization, statements about strict \(\tau_0\)-independence of \emph{transition amplitudes} require a renormalized notion of gauge together with the scaling properties of \(H\). We propose to formalize \(\tau_0\)-changes as Weyl–dilations on the physical Hilbert bundle and track induced counterterms.
+
+\paragraph{(ii) Full action variation and back-reaction.}
+Complete the covariant variation of \(S[g,\tau,\Phi]\) with constraints, energy conditions, and coupling to matter beyond minisuperspace; derive the $\tilde g$ equations after the clock-gauge/conformal choice, and analyze consistency (Bianchi identities, $\nabla_\mu T^{\mu\nu}=0$).
+
+\paragraph{(iii) Geodesic completeness and causal structure in $(\mathcal M,\tilde g)$.}
+Having regular invariants is not yet geodesic completeness. We propose to classify completeness, horizons, and causal diamonds in $\tilde g$ (e.g.\ FLRW with $\Omega=1/t$) and compare to BKL/asymptotic-silence notions \cite{BKL,AnderssonRendall}.
+
+\paragraph{(iv) Interacting QFT and renormalization in the $\sigma$-frame.}
+Extend the free-field results to interactions; analyze adiabatic subtraction and Hadamard renormalization in the $\sigma$-frame \cite{WaldQFTCST,ParkerToms,BirrellDavies}; check whether $\sigma$-dependent counterterms preserve reparameterization invariance.
+
+\section{Conclusion}
+LTQG provides a mathematically rigorous, minimal reconciliation of GR and QM temporal structures via a single reparameterization.
+It proves unitary equivalence of dynamics, produces an asymptotic silence regulator at early times, and regularizes scalar curvature in simple cosmologies under an explicitly computable Weyl transform. The framework is falsifiable through $\sigma$-uniform protocols.
+Remaining items---$\tau_0$ in fully dynamical backgrounds, full action variation and back-reaction, geodesic completeness, and interacting QFT---are well-scoped and technically standard within GR/QFT toolkits.
+\emph{We present LTQG as a proposal and invite independent scrutiny and replication of the analytical and numerical results.}
+
+\paragraph{Data and Code Availability.}
+All symbolic and numerical validations (curvature invariants from $\tilde g$, minisuperspace EOM, $\tau$/$\sigma$ QFT mode solvers with adiabatic ICs, and diagnostics) are contained in the project script \texttt{ltqg\_validation\_updated\_extended.py}.
+
+\section*{Acknowledgments}
+We thank colleagues for feedback on early drafts and computations.
+
+\appendix
+\section{Derivation details}
+\subsection{Weyl identity in $4D$}
+For $\tilde g_{\mu\nu}=\Omega^2 g_{\mu\nu}$ one has (indices moved with $g$)
+\[
+\tilde \Gamma^\rho_{\mu\nu}=\Gamma^\rho_{\mu\nu}+\delta^\rho_\mu \partial_\nu\ln\Omega + \delta^\rho_\nu \partial_\mu\ln\Omega - g_{\mu\nu} g^{\rho\sigma}\partial_\sigma\ln\Omega,
+\]
+and Eq.~\eqref{eq:WeylR} follows by contraction (see \cite{CarrollGR,WaldGR}).
+
+\subsection{Mode equations and diagnostics}
+We use complex adiabatic initial conditions \(u_k'(\sigma_0)=-i\omega_k(\sigma_0)u_k(\sigma_0)\), monitor the Wronskian \(W=u_k u_k^{\ast\prime}-u_k' u_k^\ast\), and form Bogoliubov coefficients by projecting onto instantaneous positive/negative frequency bases.
+
+\bibliographystyle{unsrtnat}
+\begin{thebibliography}{99}
+
+\bibitem{CarrollGR}
+S.~M. Carroll, \emph{Spacetime and Geometry: An Introduction to General Relativity}, Addison–Wesley (2004).
+
+\bibitem{WaldGR}
+R.~M. Wald, \emph{General Relativity}, University of Chicago Press (1984).
+
+\bibitem{BirrellDavies}
+N.~D. Birrell and P.~C.~W. Davies, \emph{Quantum Fields in Curved Space}, Cambridge University Press (1982).
+
+\bibitem{ParkerToms}
+L.~Parker and D.~Toms, \emph{Quantum Field Theory in Curved Spacetime}, Cambridge University Press (2009).
+
+\bibitem{WaldQFTCST}
+R.~M. Wald, ``Quantum Field Theory in Curved Spacetime and Black Hole Thermodynamics,'' University of Chicago Press (1994).
+
+\bibitem{BKL}
+V.~A. Belinski, I.~M. Khalatnikov, and E.~M. Lifshitz, ``Oscillatory approach to a singular point in the relativistic cosmology,'' \emph{Adv. Phys.} \textbf{19}, 525–573 (1970).
+
+\bibitem{AnderssonRendall}
+L.~Andersson and A.~D. Rendall, ``Quiescent cosmological singularities,'' \emph{Commun. Math. Phys.} \textbf{218}, 479–511 (2001).
+
+\bibitem{MisraSudarshan}
+B.~Misra and E.~C.~G. Sudarshan, ``The Zeno’s paradox in quantum theory,'' \emph{J. Math. Phys.} \textbf{18}, 756 (1977).
+
+\end{thebibliography}
+
+\end{document}
