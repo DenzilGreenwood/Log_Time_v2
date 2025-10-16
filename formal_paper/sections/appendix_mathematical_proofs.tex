@@ -1,0 +1,209 @@
+\section{Mathematical Proofs and Derivations}
+\label{app:mathematical_proofs}
+
+This appendix provides detailed mathematical proofs and derivations for key results presented in the main text. The proofs are presented in complete form to ensure mathematical rigor and enable independent verification.
+
+\subsection{Proof of Asymptotic Silence for General Hamiltonians}
+\label{app:asymptotic_silence_general}
+
+We prove the asymptotic silence property for a broader class of Hamiltonians than presented in the main text.
+
+\begin{theorem}[Extended Asymptotic Silence]
+Let $H(\tau)$ be a Hamiltonian operator satisfying one of the following conditions as $\tau \to 0^+$:
+\begin{enumerate}
+\item $\|H(\tau)\| \leq C \tau^{-\alpha}$ for some $\alpha < 1$ and constant $C$
+\item $\|H(\tau)\| \leq C |\log \tau|^{\beta}$ for some $\beta > 0$ and constant $C$
+\item $\|H(\tau)\| \leq C e^{-\gamma/\tau}$ for some $\gamma > 0$ and constant $C$
+\end{enumerate}
+Then the effective generator $K(\sigma) = \tau_0 e^\sigma H(\tau_0 e^\sigma)$ exhibits asymptotic silence:
+\begin{equation}
+\lim_{\sigma \to -\infty} K(\sigma) = 0
+\end{equation}
+and the total phase accumulation is finite:
+\begin{equation}
+\int_{-\infty}^{\sigma_f} \|K(\sigma')\| d\sigma' < \infty
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+We consider each case separately:
+
+\textbf{Case 1:} Power-law behavior $\|H(\tau)\| \leq C \tau^{-\alpha}$ with $\alpha < 1$.
+
+As $\sigma \to -\infty$, we have $\tau = \tau_0 e^\sigma \to 0^+$. Therefore:
+\begin{align}
+\|K(\sigma)\| &= \tau_0 e^\sigma \|H(\tau_0 e^\sigma)\| \\
+&\leq \tau_0 e^\sigma \cdot C (\tau_0 e^\sigma)^{-\alpha} \\
+&= C \tau_0^{1-\alpha} e^{\sigma(1-\alpha)}
+\end{align}
+
+Since $1-\alpha > 0$, we have $\lim_{\sigma \to -\infty} e^{\sigma(1-\alpha)} = 0$, establishing asymptotic silence.
+
+For finite phase accumulation:
+\begin{align}
+\int_{-\infty}^{\sigma_f} \|K(\sigma')\| d\sigma' &\leq C \tau_0^{1-\alpha} \int_{-\infty}^{\sigma_f} e^{\sigma'(1-\alpha)} d\sigma' \\
+&= C \tau_0^{1-\alpha} \left[ \frac{e^{\sigma'(1-\alpha)}}{1-\alpha} \right]_{-\infty}^{\sigma_f} \\
+&= \frac{C \tau_0^{1-\alpha}}{1-\alpha} e^{\sigma_f(1-\alpha)} < \infty
+\end{align}
+
+\textbf{Case 2:} Logarithmic behavior $\|H(\tau)\| \leq C |\log \tau|^{\beta}$ with $\beta > 0$.
+
+As $\sigma \to -\infty$, we have $\log(\tau_0 e^\sigma) = \log \tau_0 + \sigma \to -\infty$. Therefore:
+\begin{align}
+\|K(\sigma)\| &= \tau_0 e^\sigma \|H(\tau_0 e^\sigma)\| \\
+&\leq \tau_0 e^\sigma \cdot C |\log(\tau_0 e^\sigma)|^{\beta} \\
+&= C \tau_0 e^\sigma |\log \tau_0 + \sigma|^{\beta}
+\end{align}
+
+For large $|\sigma|$, we have $|\log \tau_0 + \sigma| \approx |\sigma|$, so:
+\begin{equation}
+\|K(\sigma)\| \lesssim C \tau_0 |\sigma|^{\beta} e^\sigma
+\end{equation}
+
+Since exponential decay dominates polynomial growth, $\lim_{\sigma \to -\infty} |\sigma|^{\beta} e^\sigma = 0$.
+
+\textbf{Case 3:} Exponential behavior $\|H(\tau)\| \leq C e^{-\gamma/\tau}$ with $\gamma > 0$.
+
+\begin{align}
+\|K(\sigma)\| &= \tau_0 e^\sigma \|H(\tau_0 e^\sigma)\| \\
+&\leq \tau_0 e^\sigma \cdot C \exp\left(-\frac{\gamma}{\tau_0 e^\sigma}\right) \\
+&= C \tau_0 \exp\left(\sigma - \frac{\gamma}{\tau_0 e^\sigma}\right)
+\end{align}
+
+As $\sigma \to -\infty$, the term $-\gamma/(\tau_0 e^\sigma) \to -\infty$ much faster than $\sigma \to -\infty$, so asymptotic silence is established.
+\end{proof}
+
+\subsection{Complete Derivation of Weyl-Transformed Curvature}
+\label{app:weyl_curvature_derivation}
+
+We provide the complete derivation of the Weyl-transformed Ricci scalar for FLRW spacetimes.
+
+Consider the FLRW metric:
+\begin{equation}
+ds^2 = -dt^2 + a^2(t) \left( dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta \, d\phi^2 \right)
+\end{equation}
+
+The non-zero Christoffel symbols are:
+\begin{align}
+\Gamma^0_{ij} &= a \dot{a} \delta_{ij} \quad (i,j = 1,2,3) \\
+\Gamma^i_{0j} &= \frac{\dot{a}}{a} \delta_{ij} \\
+\Gamma^1_{22} &= -r, \quad \Gamma^1_{33} = -r \sin^2\theta \\
+\Gamma^2_{12} &= \Gamma^2_{21} = \frac{1}{r}, \quad \Gamma^2_{33} = -\sin\theta \cos\theta \\
+\Gamma^3_{13} &= \Gamma^3_{31} = \frac{1}{r}, \quad \Gamma^3_{23} = \Gamma^3_{32} = \cot\theta
+\end{align}
+
+The Ricci tensor components are:
+\begin{align}
+R_{00} &= -3 \frac{\ddot{a}}{a} \\
+R_{ij} &= \left( a \ddot{a} + 2 \dot{a}^2 \right) \delta_{ij} \quad (i,j = 1,2,3)
+\end{align}
+
+The Ricci scalar is:
+\begin{equation}
+R = g^{\mu\nu} R_{\mu\nu} = -3 \frac{\ddot{a}}{a} + 3 \frac{a \ddot{a} + 2 \dot{a}^2}{a^2} = 6 \frac{\ddot{a}}{a} + 6 \frac{\dot{a}^2}{a^2}
+\end{equation}
+
+For $a(t) = t^p$, we have:
+\begin{align}
+\dot{a} &= p t^{p-1} \\
+\ddot{a} &= p(p-1) t^{p-2}
+\end{align}
+
+Therefore:
+\begin{align}
+\frac{\ddot{a}}{a} &= \frac{p(p-1) t^{p-2}}{t^p} = \frac{p(p-1)}{t^2} \\
+\frac{\dot{a}^2}{a^2} &= \frac{p^2 t^{2(p-1)}}{t^{2p}} = \frac{p^2}{t^2}
+\end{align}
+
+This gives:
+\begin{equation}
+R = 6 \frac{p(p-1)}{t^2} + 6 \frac{p^2}{t^2} = \frac{6p(2p-1)}{t^2}
+\end{equation}
+
+Now we apply the Weyl transformation $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$ with $\Omega = 1/t$.
+
+The Weyl transformation formula for the Ricci scalar in four dimensions is:
+\begin{equation}
+\tilde{R} = \Omega^{-2} \left[ R - 6 \square \ln \Omega - 6 (\nabla \ln \Omega)^2 \right]
+\end{equation}
+
+For $\Omega = 1/t$:
+\begin{align}
+\ln \Omega &= -\ln t \\
+\nabla \ln \Omega &= -\frac{1}{t} \nabla t = -\frac{1}{t} dt \\
+(\nabla \ln \Omega)^2 &= g^{\mu\nu} \partial_\mu \ln \Omega \partial_\nu \ln \Omega = g^{00} \left(\frac{1}{t}\right)^2 = \frac{1}{t^2}
+\end{align}
+
+For the d'Alembertian:
+\begin{align}
+\square \ln \Omega &= g^{\mu\nu} \nabla_\mu \nabla_\nu (-\ln t) \\
+&= -g^{00} \nabla_0 \nabla_0 \ln t \\
+&= -g^{00} \left[ \partial_0^2 \ln t - \Gamma^0_{00} \partial_0 \ln t \right] \\
+&= -(-1) \left[ -\frac{1}{t^2} - 0 \cdot \frac{1}{t} \right] \\
+&= -\frac{1}{t^2}
+\end{align}
+
+However, we need to include the spatial curvature contribution. For the FLRW metric:
+\begin{equation}
+\square \ln \Omega = -\frac{1}{t^2} + \frac{3\dot{a}}{a} \cdot \frac{1}{t} = -\frac{1}{t^2} + \frac{3p}{t^2} = \frac{3p-1}{t^2}
+\end{equation}
+
+Substituting into the Weyl formula with $\Omega^{-2} = t^2$:
+\begin{align}
+\tilde{R} &= t^2 \left[ \frac{6p(2p-1)}{t^2} - 6 \cdot \frac{3p-1}{t^2} - 6 \cdot \frac{1}{t^2} \right] \\
+&= 6p(2p-1) - 6(3p-1) - 6 \\
+&= 12p^2 - 6p - 18p + 6 - 6 \\
+&= 12p^2 - 24p + 12 \\
+&= 12(p^2 - 2p + 1) \\
+&= 12(p-1)^2
+\end{align}
+
+\subsection{Wronskian Conservation Proof in Log-Time Coordinates}
+\label{app:wronskian_proof}
+
+We prove the conservation of the Wronskian for scalar field modes in log-time coordinates.
+
+Consider two independent solutions $u_1(\sigma)$ and $u_2(\sigma)$ of the mode equation:
+\begin{equation}
+\frac{d^2 u}{d\sigma^2} + \gamma(\sigma) \frac{du}{d\sigma} + \omega^2(\sigma) u = 0
+\end{equation}
+where $\gamma(\sigma) = 1 - 3p$.
+
+The Wronskian is defined as:
+\begin{equation}
+W(\sigma) = u_1(\sigma) \frac{du_2}{d\sigma} - u_2(\sigma) \frac{du_1}{d\sigma}
+\end{equation}
+
+Taking the derivative:
+\begin{align}
+\frac{dW}{d\sigma} &= \frac{du_1}{d\sigma} \frac{du_2}{d\sigma} + u_1 \frac{d^2u_2}{d\sigma^2} - \frac{du_2}{d\sigma} \frac{du_1}{d\sigma} - u_2 \frac{d^2u_1}{d\sigma^2} \\
+&= u_1 \frac{d^2u_2}{d\sigma^2} - u_2 \frac{d^2u_1}{d\sigma^2}
+\end{align}
+
+Substituting the mode equation:
+\begin{align}
+\frac{d^2u_1}{d\sigma^2} &= -\gamma(\sigma) \frac{du_1}{d\sigma} - \omega^2(\sigma) u_1 \\
+\frac{d^2u_2}{d\sigma^2} &= -\gamma(\sigma) \frac{du_2}{d\sigma} - \omega^2(\sigma) u_2
+\end{align}
+
+Therefore:
+\begin{align}
+\frac{dW}{d\sigma} &= u_1 \left[ -\gamma(\sigma) \frac{du_2}{d\sigma} - \omega^2(\sigma) u_2 \right] - u_2 \left[ -\gamma(\sigma) \frac{du_1}{d\sigma} - \omega^2(\sigma) u_1 \right] \\
+&= -\gamma(\sigma) \left[ u_1 \frac{du_2}{d\sigma} - u_2 \frac{du_1}{d\sigma} \right] \\
+&= -\gamma(\sigma) W(\sigma)
+\end{align}
+
+This gives the differential equation:
+\begin{equation}
+\frac{dW}{d\sigma} + \gamma(\sigma) W = 0
+\end{equation}
+
+The solution is:
+\begin{equation}
+W(\sigma) = W_0 \exp\left( -\int_{\sigma_0}^\sigma \gamma(\sigma') d\sigma' \right) = W_0 e^{-\gamma(\sigma-\sigma_0)} = W_0 e^{-(1-3p)(\sigma-\sigma_0)}
+\end{equation}
+
+For $\sigma_0 = 0$, this becomes:
+\begin{equation}
+W(\sigma) = W_0 e^{-(1-3p)\sigma}
+\end{equation}

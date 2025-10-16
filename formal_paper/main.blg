@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+Warning--entry type for "numpy2020" isn't style-file defined
+--line 313 of file references.bib
+Warning--entry type for "scipy2020" isn't style-file defined
+--line 331 of file references.bib
+Warning--entry type for "sympy2017" isn't style-file defined
+--line 349 of file references.bib
+You've used 24 entries,
+            1791 wiz_defined-function locations,
+            584 strings with 6140 characters,
+and the built_in function-call counts, 4453 in all, are:
+= -- 406
+> -- 130
+< -- 1
++ -- 57
+- -- 33
+* -- 231
+:= -- 699
+add.period$ -- 69
+call.type$ -- 24
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 219
+empty$ -- 503
+format.name$ -- 33
+if$ -- 1005
+int.to.chr$ -- 0
+int.to.str$ -- 24
+missing$ -- 29
+newline$ -- 120
+num.names$ -- 24
+pop$ -- 96
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 83
+stack$ -- 0
+substring$ -- 274
+swap$ -- 33
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 45
+width$ -- 26
+write$ -- 247
+(There were 3 warnings)

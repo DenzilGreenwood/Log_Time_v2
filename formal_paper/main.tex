@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+% Mathematical packages
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{physics}
+\usepackage{bm}
+
+% Layout and formatting
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+
+% Citations and references
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+% Author information
+\usepackage{authblk}
+
+% Custom theorem environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+
+% Custom commands
+\newcommand{\ltqg}{\text{LTQG}}
+\newcommand{\sigmat}{\sigma}
+\newcommand{\taut}{\tau}
+\newcommand{\mfrakM}{\mathfrak{M}}
+\newcommand{\tildeR}{\tilde{R}}
+\newcommand{\tildeg}{\tilde{g}}
+
+% Title and author information
+\title{\vspace{-1em}%
+Log-Time Quantum Gravity: \\
+A Mathematical Framework for Temporal Unification \\
+Between General Relativity and Quantum Mechanics}
+
+\author[1]{Denzil James Greenwood}
+\affil[1]{Independent Research}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% Abstract
+\input{sections/abstract}
+
+% Table of contents
+\tableofcontents
+\clearpage
+
+% Main sections
+\input{sections/introduction}
+\input{sections/mathematical_framework}
+\input{sections/quantum_mechanics}
+\input{sections/cosmology}
+\input{sections/quantum_field_theory}
+\input{sections/computational_validation}
+\input{sections/results_discussion}
+\input{sections/conclusion}
+
+% Add some sample citations to avoid "no citation commands" error
+\nocite{*}
+
+% Acknowledgments
+\input{sections/acknowledgments}
+
+% Bibliography
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+% Appendices (if needed)
+\appendix
+\input{sections/appendix_mathematical_proofs}
+\input{sections/appendix_computational_details}
+
+\end{document}

@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{einstein1915}
+Albert Einstein.
+\newblock Die feldgleichungen der gravitation.
+\newblock {\em Sitzungsberichte der K{\"o}niglich Preu{\ss}ischen Akademie der Wissenschaften}, pages 844--847, 1915.
+
+\bibitem{schrodinger1926}
+Erwin Schr{\"o}dinger.
+\newblock {\"U}ber das verh{\"a}ltnis der heisenberg-born-jordanschen quantenmechanik zu der meinen.
+\newblock {\em Annalen der Physik}, 384(8):734--756, 1926.
+
+\bibitem{weinberg1972}
+Steven Weinberg.
+\newblock {\em Gravitation and Cosmology: Principles and Applications of the General Theory of Relativity}.
+\newblock John Wiley \& Sons, 1972.
+
+\bibitem{carroll2004}
+Sean~M. Carroll.
+\newblock {\em Spacetime and Geometry: An Introduction to General Relativity}.
+\newblock Addison Wesley, 2004.
+
+\bibitem{birrell1982}
+Nick~D. Birrell and Paul~C.W. Davies.
+\newblock {\em Quantum Fields in Curved Space}.
+\newblock Cambridge University Press, 1982.
+
+\bibitem{ashtekar2006}
+Abhay Ashtekar, Tomasz Pawlowski, and Parampreet Singh.
+\newblock Quantum nature of the big bang.
+\newblock {\em Physical Review Letters}, 96(14):141301, 2006.
+
+\bibitem{bojowald2001}
+Martin Bojowald.
+\newblock Absence of singularity in loop quantum cosmology.
+\newblock {\em Physical Review Letters}, 86(23):5227--5230, 2001.
+
+\bibitem{kiefer2007}
+Claus Kiefer.
+\newblock {\em Quantum Gravity}.
+\newblock Oxford University Press, 2007.
+
+\bibitem{guth1981}
+Alan~H. Guth.
+\newblock Inflationary universe: A possible solution to the horizon and flatness problems.
+\newblock {\em Physical Review D}, 23(2):347--356, 1981.
+
+\bibitem{linde1982}
+Andrei~D. Linde.
+\newblock A new inflationary universe scenario: a possible solution of the horizon, flatness, homogeneity, isotropy and primordial monopole problems.
+\newblock {\em Physics Letters B}, 108(6):389--393, 1982.
+
+\bibitem{planck2020}
+Planck Collaboration.
+\newblock Planck 2018 results. vi. cosmological parameters.
+\newblock {\em Astronomy \& Astrophysics}, 641:A6, 2020.
+
+\bibitem{hawking1975}
+Stephen~W. Hawking.
+\newblock Particle creation by black holes.
+\newblock {\em Communications in Mathematical Physics}, 43(3):199--220, 1975.
+
+\bibitem{misner1973}
+Charles~W. Misner, Kip~S. Thorne, and John~Archibald Wheeler.
+\newblock {\em Gravitation}.
+\newblock W. H. Freeman, 1973.
+
+\bibitem{wald1984}
+Robert~M. Wald.
+\newblock {\em General Relativity}.
+\newblock University of Chicago Press, 1984.
+
+\bibitem{peskin1995}
+Michael~E. Peskin and Daniel~V. Schroeder.
+\newblock {\em An Introduction to Quantum Field Theory}.
+\newblock Addison-Wesley, 1995.
+
+\bibitem{parker1969}
+Leonard Parker.
+\newblock Quantized fields and particle creation in expanding universes. i.
+\newblock {\em Physical Review}, 183(5):1057--1068, 1969.
+
+\bibitem{fulling1973}
+Stephen~A. Fulling.
+\newblock Nonuniqueness of canonical field quantization in riemannian space-time.
+\newblock {\em Physical Review D}, 7(10):2850--2862, 1973.
+
+\bibitem{unruh1976}
+William~G. Unruh.
+\newblock Notes on black-hole evaporation.
+\newblock {\em Physical Review D}, 14(4):870--892, 1976.
+
+\bibitem{numpy2020}
+Charles~R. Harris et~al.
+\newblock Array programming with numpy, 2020.
+
+\bibitem{scipy2020}
+Pauli Virtanen et~al.
+\newblock Scipy 1.0: fundamental algorithms for scientific computing in python, 2020.
+
+\bibitem{sympy2017}
+Aaron Meurer et~al.
+\newblock Sympy: symbolic computing in python, 2017.
+
+\bibitem{rovelli2004}
+Carlo Rovelli.
+\newblock Quantum gravity.
+\newblock {\em Cambridge University Press}, 2004.
+
+\bibitem{thiemann2007}
+Thomas Thiemann.
+\newblock Modern canonical quantum general relativity.
+\newblock {\em Cambridge University Press}, 2007.
+
+\bibitem{penrose2004}
+Roger Penrose.
+\newblock {\em The road to reality: A complete guide to the laws of the universe}.
+\newblock Jonathan Cape, 2004.
+
+\end{thebibliography}
