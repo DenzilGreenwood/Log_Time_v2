@@ -49,30 +49,24 @@ The Weyl transformation of the Ricci scalar in four dimensions follows the gener
 For $\Omega = 1/t$ and the FLRW metric:
 \begin{align}
 \ln \Omega &= -\ln t \\
-\nabla \ln \Omega &= -t^{-1} \nabla t = -t^{-1} dt \\
-(\nabla \ln \Omega)^2 &= t^{-2} g^{00} = t^{-2} \\
-\square \ln \Omega &= g^{\mu\nu} \nabla_\mu \nabla_\nu (-\ln t)
+\partial_t \ln \Omega &= -t^{-1}
 \end{align}
 
-Computing the d'Alembertian:
-\begin{align}
-\square \ln \Omega &= -g^{00} \partial_t^2 \ln t - \Gamma^0_{00} g^{00} \partial_t \ln t \\
-&= \frac{1}{t^2} - \frac{3\dot{a}}{a} \cdot \frac{1}{t} \\
-&= \frac{1}{t^2} - \frac{3p}{t^2} = \frac{1-3p}{t^2}
-\end{align}
+With signature $(-,+,+,+)$, $(\nabla f)^2 = g^{\mu\nu} \partial_\mu f \partial_\nu f$. For $f = \ln \Omega = -\ln t$ (time-only), $(\nabla \ln \Omega)^2 = g^{00} (\partial_0 \ln \Omega)^2 = -t^{-2}$. Likewise, $\square \ln \Omega = g^{\mu\nu} \nabla_\mu \nabla_\nu (-\ln t) = -t^{-2} + 3\dot{a}/a \cdot t^{-1} = (3p-1)/t^2$.
 
 Substituting into the Weyl formula with $R = 6p(2p-1)t^{-2}$ and $\Omega^{-2} = t^2$:
 \begin{align}
-\tilde{R} &= t^2 \left[ 6p(2p-1)t^{-2} - 6 \cdot \frac{1-3p}{t^2} - 6 \cdot t^{-2} \right] \\
-&= 6p(2p-1) - 6(1-3p) - 6 \\
-&= 12p^2 - 6p - 6 + 18p - 6 \\
-&= 12p^2 - 12p + 12 \\
-&= 12(p^2 - p + 1) \\
+\tilde{R} &= t^2 \left[ 6p(2p-1)t^{-2} - 6 \cdot \frac{3p-1}{t^2} - 6 \cdot (-t^{-2}) \right] \\
+&= 6p(2p-1) - 6(3p-1) + 6 \\
+&= 12p^2 - 6p - 18p + 6 + 6 \\
+&= 12p^2 - 24p + 12 \\
 &= 12(p-1)^2
 \end{align}
 \end{proof}
 
 This result is remarkable: the divergent curvature $R(t) \propto t^{-2}$ becomes a finite constant $\tilde{R} = 12(p-1)^2$ under the Weyl transformation.
+
+The constancy of $\tilde{R}$ is a conformal-frame statement. It does not, by itself, imply geodesic completeness or remove singular behavior in the original FLRW frame without a specified matter-coupling prescription.
 
 \subsection{Physical Interpretation of Curvature Regularization}
 \label{subsec:physical_interpretation}

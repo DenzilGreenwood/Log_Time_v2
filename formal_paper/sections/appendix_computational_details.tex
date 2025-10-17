@@ -139,7 +139,9 @@ def compute_flrw_curvature_symbolic():
 def compute_christoffel_symbols(metric, coords):
     """Compute Christoffel symbols symbolically."""
     n = len(coords)
-    christoffel = [[[0 for k in range(n)] for j in range(n)] for i in range(n)]
+    christoffel = [[[0 for k in range(n)] 
+                   for j in range(n)] 
+                  for i in range(n)]
     
     g_inv = metric.inv()
     
@@ -176,7 +178,8 @@ def verify_weyl_transformation_symbolic():
     grad_ln_Omega_sq = (diff(ln_Omega, t))**2
     dalembertian_ln_Omega = diff(diff(ln_Omega, t), t)  # Simplified for FLRW
     
-    R_weyl = Omega**(-2) * (R_original - 6*dalembertian_ln_Omega - 6*grad_ln_Omega_sq)
+    R_weyl = Omega**(-2) * (R_original - 6*dalembertian_ln_Omega 
+                           - 6*grad_ln_Omega_sq)
     
     R_weyl_simplified = simplify(R_weyl)
     

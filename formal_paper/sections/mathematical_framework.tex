@@ -7,7 +7,7 @@ I establish the rigorous mathematical foundations of the Log-Time Quantum Gravit
 \label{subsec:log_time_transformation}
 
 \begin{definition}[Log-Time Coordinate]
-Let $\tau > 0$ denote proper time and $\tau_0 > 0$ a reference time scale. The log-time coordinate $\sigma$ is defined by:
+Let $\tau > 0$ denote proper time (we assume $\tau > 0$ throughout this work) and $\tau_0 > 0$ a reference time scale. The log-time coordinate $\sigma$ is defined by:
 \begin{equation}
 \sigma = \log\left(\frac{\tau}{\tau_0}\right)
 \label{eq:log_time_def}
@@ -158,6 +158,8 @@ For quantum states $\psi(\tau)$, the inner product structure is preserved under 
 \langle \psi_1 | \psi_2 \rangle_\tau = \langle \tilde{\psi}_1 | \tilde{\psi}_2 \rangle_\sigma
 \end{equation}
 where $\tilde{\psi}(\sigma) = \tau_0^{-1/2} e^{-\sigma/2} \psi(\tau_0 e^\sigma)$.
+
+\emph{Note}: This rescaling is a bookkeeping choice tied to the Jacobian of the coordinate transformation and is not a physical field redefinition. The normalization factor $\tau_0^{-1/2} e^{-\sigma/2}$ compensates for the measure transformation $d\tau = \tau_0 e^\sigma d\sigma$ to ensure that inner products are preserved across coordinate systems.
 \end{corollary}
 
 \subsection{Regularity and Smoothness}

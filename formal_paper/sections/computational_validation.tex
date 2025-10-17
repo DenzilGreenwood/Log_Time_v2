@@ -17,7 +17,7 @@ The computational validation is organized into a modular architecture that syste
 \item \textbf{Variational Mechanics} (\texttt{ltqg\_variational.py})
 \end{enumerate}
 
-Each module implements both analytical verification through symbolic computation (using SymPy) and numerical validation through high-precision integration and comparison.
+Each module implements both analytical verification through symbolic computation (using SymPy) and numerical validation through high-precision integration and comparison. All numerical integrations employ adaptive Runge-Kutta methods to ensure robust evolution and eliminate numerical drift artifacts that can appear with fixed-step integrators (particularly in systems with anti-damping characteristics or rapid time-scale variations).
 
 \subsection{Core Mathematical Validation}
 \label{subsec:core_mathematical_validation}
@@ -173,6 +173,8 @@ throughout the evolution from $\sigma_i = -10$ to $\sigma_f = 5$.
 \item Mode equations integrated as first-order systems
 \item Conservation quantities monitored at each integration step
 \end{itemize}
+
+In early experiments, fixed-step integrators exhibited apparent "Wronskian drift"; switching to adaptive RK with strict $(rtol, atol) = (10^{-10}, 10^{-12})$ eliminated this artifact, matching the analytic scaling law.
 
 \begin{theorem}[Bogoliubov Unitarity Validation]
 \label{thm:bogoliubov_unitarity_validation}

@@ -1,7 +1,7 @@
 \section{Quantum Field Theory on Curved Spacetime}
 \label{sec:qft}
 
-I extend the LTQG framework to quantum field theory on curved spacetimes, demonstrating that scalar field mode evolution maintains all conservation laws and equivalence relationships when transformed to log-time coordinates. This provides crucial validation that the framework preserves quantum field theory predictions while offering new computational and conceptual tools.
+I extend the LTQG framework to quantum field theory on curved spacetimes, demonstrating that scalar field mode evolution maintains all conservation laws and equivalence relationships when transformed to log-time coordinates. This provides crucial validation that the framework preserves quantum field theory predictions while offering new computational and conceptual tools (see Theorems~\ref{thm:bogoliubov_unitarity} and~\ref{thm:particle_number} for Bogoliubov unitarity, particle number, and $\tau$-$\sigma$ mode equivalence).
 
 \subsection{Scalar Field Equation in FLRW Background}
 \label{subsec:scalar_field_flrw}
@@ -118,6 +118,8 @@ where $\Omega(\sigma) = t_0^{-1} e^{-\sigma}$ represents the conformal factor.
 
 This first-order formulation is particularly suitable for numerical integration and provides clear physical interpretation of the mode dynamics.
 
+Equations \eqref{eq:first_order_system} are exactly the system integrated in our code (adaptive RK); diagnostics compute Wronskian, energy per mode, and instantaneous $(\alpha_k, \beta_k)$ to verify constraints during evolution.
+
 \subsection{Wronskian Conservation}
 \label{subsec:wronskian_conservation}
 
@@ -152,6 +154,8 @@ Taking the derivative of the Wronskian and using the first-order system \eqref{e
 \end{proof}
 
 This conservation law is crucial for maintaining the canonical commutation relations in the quantum theory.
+
+\emph{Note on "Conservation"}: Here "conservation" means the Wronskian obeys the exact scaling law $W(\sigma) = W_0 e^{-(1-3p)\sigma}$ induced by the first-order system, which is the appropriate $\sigma$-analog of constancy.
 
 \subsection{Bogoliubov Transformations}
 \label{subsec:bogoliubov_transformations}
@@ -197,6 +201,8 @@ n_k(\sigma) = |\beta_k(\sigma)|^2
 
 This quantity represents the number of particles created by the expanding spacetime background and provides a direct link between the geometric evolution and quantum field effects.
 
+\emph{Important Note}: As usual in QFT on curved spacetime, $n_k = |\beta_k|^2$ is basis/vacuum dependent (e.g., adiabatic scheme). Our invariance results concern the equality of predictions between $\tau$ and $\sigma$ given the same prescription, not a coordinate-independent notion of particles.
+
 \subsection[Equivalence Between tau and sigma Evolution]{Equivalence Between $\tau$ and $\sigma$ Evolution}
 \label{subsec:tau_sigma_equivalence}
 
@@ -235,7 +241,7 @@ This approximation provides analytical control over the mode evolution in regime
 I have implemented comprehensive numerical validation of all quantum field theory results:
 
 \begin{enumerate}
-\item \textbf{Wronskian Conservation}: Verified $|W(\sigma) - W_0 e^{-(1-3p)\sigma}| < 10^{-8}$ throughout evolution
+\item \textbf{Wronskian Conservation}: Verified $|W(\sigma) - W_0 e^{-(1-3p)\sigma}| < 10^{-8}$ throughout evolution (adaptive integration methods are essential to avoid numerical drift artifacts that can appear with fixed-step integrators in anti-damped regimes)
 \item \textbf{Bogoliubov Unitarity}: Confirmed $||\alpha_k|^2 - |\beta_k|^2 - 1| < 10^{-6}$ for all modes
 \item \textbf{$\tau$-$\sigma$ Equivalence}: Mode functions agree to within $10^{-6}$ relative error
 \item \textbf{Particle Number Conservation}: Number density evolution follows expected theoretical predictions
@@ -253,6 +259,8 @@ Physical observables computed in log-time coordinates are independent of the cho
 \end{theorem}
 
 This ensures that the log-time framework does not introduce spurious renormalization artifacts.
+
+\emph{Important Note}: Physical renormalized quantities must be defined with respect to a specified vacuum subtraction scheme (such as adiabatic subtraction or point-splitting with Hadamard parametrix). The log-time coordinate transformation preserves the mathematical structure of renormalization while requiring careful treatment of the vacuum state definition, which remains basis-dependent as in standard quantum field theory on curved spacetime.
 
 \subsection{Stress-Energy Tensor and Backreaction}
 \label{subsec:stress_energy_backreaction}
@@ -301,16 +309,16 @@ The LTQG approach preserves the standard QFT framework while providing regulariz
 \subsection{Observational Consequences}
 \label{subsec:qft_observational_consequences}
 
-The quantum field theory predictions of LTQG have potential observational signatures:
+The quantum field theory predictions of LTQG have potential operational signatures through different sampling and analysis protocols:
 
 \begin{enumerate}
-\item \textbf{Primordial Gravitational Waves}: Modified tensor mode evolution due to log-time dynamics
-\item \textbf{Scalar Perturbations}: Different growth rates for density perturbations in $\sigma$-coordinates
-\item \textbf{Non-Gaussianity}: Potential modifications to higher-order correlation functions
-\item \textbf{Particle Creation Spectra}: Different energy distributions for particles created by cosmic expansion
+\item \textbf{Primordial Gravitational Waves}: $\sigma$-uniform sampling provides enhanced resolution of early-time tensor modes
+\item \textbf{Scalar Perturbations}: Different temporal gridding affects numerical computation of density perturbation evolution
+\item \textbf{Non-Gaussianity}: Log-time coordinate analysis may reveal different computational approaches to higher-order correlations
+\item \textbf{Particle Creation Spectra}: $\sigma$-parameterized integration affects numerical computation of energy distributions
 \end{enumerate}
 
-These signatures provide potential tests of the framework through precision cosmological observations.
+These operational differences provide potential tests of the framework through computational analysis methods, while preserving the invariance of physical predictions established by our unitary equivalence theorems.
 
 \subsection{QFT Applications Summary}
 

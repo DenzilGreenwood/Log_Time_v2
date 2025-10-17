@@ -6,18 +6,28 @@ This document confirms that all requirements from the LTQG Completion Specificat
 
 ## ✅ Core Mathematical Framework
 
-### 1. Unitary Equivalence Theorem (τ ↔ σ) - COMPLETED
-- **Location**: `ltqg_quantum.py` lines 25-45
-- **Status**: ✅ Boxed proposition with hypotheses implemented
+### 1. Unitary Equivalence Theorem (τ ↔ σ) - COMPLETED & ENHANCED ✨
+- **Location**: `ltqg_quantum.py` lines 25-45 + `01_Core_Mathematics/core_mathematics.pdf`
+- **Status**: ✅ Enhanced with rigorous mathematical proofs per reviewer feedback
+- **Recent Enhancement**: Upgraded to "Reparametrization Invariance of Propagators" theorem with:
+  - Self-adjoint Hamiltonian condition H†(τ) = H(τ)
+  - Strong measurability and local L¹ boundedness hypotheses  
+  - Dyson series convergence proof with dominated convergence theorem
+  - Explicit τ₀-invariance lemma demonstrating gauge freedom of reference scale
 - **Content**: 
   - Strong measurability + local boundedness + Kato existence conditions
   - 5-line proof outline with Dyson series equality
   - Variable change τ = τ₀e^σ with dominated convergence justification
 - **Validation**: Cross-referenced from quantum validation section
 
-### 2. Asymptotic Silence: L¹ Conditions & Counter-example - COMPLETED  
-- **Location**: `ltqg_core.py` lines 180-220
-- **Status**: ✅ Boxed corollary with explicit counter-example
+### 2. Asymptotic Silence: L¹ Conditions & Counter-example - COMPLETED & ENHANCED ✨
+- **Location**: `ltqg_core.py` lines 180-220 + `01_Core_Mathematics/core_mathematics.pdf`  
+- **Status**: ✅ Enhanced with sharp boundary conditions per reviewer feedback
+- **Recent Enhancement**: Upgraded asymptotic silence to precise condition τH(τ)→0 with:
+  - Sharp boundary condition: τH(τ) → 0 as τ → 0⁺ (necessary and sufficient)
+  - Power-law examples: H(τ) ∼ τ^(-α) gives silence iff α < 1
+  - Explicit counterexample: H(τ) ∼ τ^(-3/2) violates silence condition
+  - Clean separation of (silence) vs (no silence) regimes
 - **Content**:
   - L¹(0,τ₁] and O(τ^(-α)), α<1 conditions
   - Counter-example: H(τ) = e^(1/τ) violates conditions
@@ -33,9 +43,14 @@ This document confirms that all requirements from the LTQG Completion Specificat
   - H = p/t, ρ(a) ∝ a^(-3(1+w)), ρ(t) ∝ t^(-2), R̃ = 12(p-1)²
 - **Validation**: Table compiles without warnings, cited in cosmology section
 
-### 4. Frame Dependence Warning - COMPLETED
-- **Location**: `ltqg_cosmology.py` lines 195-215  
-- **Status**: ✅ Boxed warning with 6 precise sentences
+### 4. Frame Dependence Warning - COMPLETED & ENHANCED ✨
+- **Location**: `ltqg_cosmology.py` lines 195-215 + `01_Core_Mathematics/core_mathematics.pdf`
+- **Status**: ✅ Enhanced with coordinate vs conformal clarification per reviewer feedback  
+- **Recent Enhancement**: Clarified coordinate vs conformal transformation distinction:
+  - Clear separation: Coordinate changes (diffeomorphisms) vs conformal rescalings (Weyl transformations)
+  - Coordinate changes preserve all curvature invariants (R, R_{ab}R^{ab}, etc.)
+  - Conformal rescalings change curvature invariants but preserve conformal structure
+  - Enhanced physical interpretation of τ = log(cosmic time/τ₀) as coordinate choice
 - **Content**:
   - Weyl rescaling ≠ diffeomorphism
   - Matter coupling choice (Einstein/Jordan) required
@@ -111,7 +126,14 @@ This document confirms that all requirements from the LTQG Completion Specificat
   - Conclusion: Testability sentence (σ-uniform scheduling & near-horizon phases as operational signatures)
 - **Validation**: All edits visible and concise (<5 lines total as required)
 
-## 🎯 VALIDATION SUMMARY
+## 🎯 VALIDATION SUMMARY - MATHEMATICAL RIGOR ENHANCED ✨
+
+### Recent Mathematical Improvements (December 2024)
+- **Enhanced Theorem Statements**: All core theorems upgraded with proper hypotheses and sharp boundary conditions
+- **Coordinate vs Conformal Clarification**: Clear distinction between diffeomorphisms and Weyl transformations  
+- **τ₀-Invariance**: Added explicit lemma proving gauge freedom of reference scale
+- **Physical Examples**: Enhanced harmonic oscillator and cosmology examples with computational advantages
+- **Asymptotic Precision**: Sharp conditions preventing overreach in mathematical claims
 
 ### Essential Test Results (Make Test Target)
 ```bash

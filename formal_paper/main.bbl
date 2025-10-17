@@ -92,15 +92,18 @@ William~G. Unruh.
 
 \bibitem{numpy2020}
 Charles~R. Harris et~al.
-\newblock Array programming with numpy, 2020.
+\newblock Array programming with numpy.
+\newblock {\em Nature}, 585:357--362, 2020.
 
 \bibitem{scipy2020}
 Pauli Virtanen et~al.
-\newblock Scipy 1.0: fundamental algorithms for scientific computing in python, 2020.
+\newblock Scipy 1.0: fundamental algorithms for scientific computing in python.
+\newblock {\em Nature Methods}, 17:261--272, 2020.
 
 \bibitem{sympy2017}
 Aaron Meurer et~al.
-\newblock Sympy: symbolic computing in python, 2017.
+\newblock Sympy: symbolic computing in python.
+\newblock {\em PeerJ Computer Science}, 3:e103, 2017.
 
 \bibitem{rovelli2004}
 Carlo Rovelli.

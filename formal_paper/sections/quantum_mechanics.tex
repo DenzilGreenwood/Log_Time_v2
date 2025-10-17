@@ -54,6 +54,8 @@ K(\sigma)^\dagger = (\tau_0 e^\sigma)^* [H(\tau_0 e^\sigma)]^\dagger = \tau_0 e^
 
 This preservation of Hermiticity ensures that quantum evolution remains unitary in log-time coordinates.
 
+\emph{Important Note}: We emphasize $K(\sigma)$ is the generator in $\sigma$ induced by the Jacobian $d\tau = \tau_0 e^\sigma d\sigma$; it is not a new Hamiltonian but a bookkeeping re-expression of $H$ under the clock change. The physics remains unchanged; only the temporal parameterization differs.
+
 \subsection{Unitary Equivalence of Evolution Operators}
 \label{subsec:unitary_equivalence}
 
@@ -111,10 +113,14 @@ For the time-ordered exponential, the ordering property is preserved because:
 The formal proof follows the standard analysis of time-ordered exponentials with the substitution $\tau = \tau_0 e^\sigma$.
 \end{proof}
 
+\emph{Heisenberg Picture Note}: The equivalence of evolution operators immediately implies that Heisenberg picture operator evolution is also preserved. For any observable $A$, the time evolution $A_H(\tau) = U^\dagger(\tau) A U(\tau)$ in proper time corresponds exactly to $A_H(\sigma) = U^\dagger(\sigma) A U(\sigma)$ in log-time, ensuring that all physical observables evolve identically in both coordinate systems.
+
 \subsection{Asymptotic Silence}
 \label{subsec:asymptotic_silence}
 
 One of the most remarkable properties of the log-time formulation is the asymptotic silence of the effective generator as $\sigma \to -\infty$. This property provides a natural regularization of the quantum evolution near classical singularities.
+
+\emph{Scope Note}: Asymptotic silence is a property of the evolution generator $K(\sigma)$ in log-time coordinates and provides computational advantages for quantum evolution near $\tau \to 0^+$. This is distinct from the geometric singularity treatment, which we address separately through Weyl transformations in Section~\ref{sec:cosmology}.
 
 \begin{theorem}[Asymptotic Silence Property]
 \label{thm:asymptotic_silence}
@@ -209,7 +215,7 @@ A critical test of the framework is its behavior for non-commuting time-dependen
 
 \begin{theorem}[Non-Commuting Hamiltonian Evolution]
 \label{thm:noncommuting_evolution}
-For Hamiltonians $H(\tau_1)$ and $H(\tau_2)$ that do not commute at different times, the time-ordered evolution preserves the non-commutativity structure in log-time coordinates:
+For Hamiltonians $H(\tau_1)$ and $H(\tau_2)$ that do not commute at different times, the time-ordered evolution preserves the non\-com\-mu\-ta\-tiv\-i\-ty structure in log-time coordinates:
 \begin{equation}
 [H(\tau_1), H(\tau_2)] \neq 0 \Rightarrow [K(\sigma_1), K(\sigma_2)] \neq 0
 \end{equation}

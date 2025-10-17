@@ -5,7 +5,7 @@ The unification of General Relativity (GR) and Quantum Mechanics (QM) remains on
 
 \subsection{The Multiplicative-Additive Temporal Clash}
 
-In General Relativity, the proper time interval $d\tau$ between events transforms under coordinate changes and in gravitational fields according to multiplicative factors. For a coordinate transformation $t \to t'$, local clock rates scale as $d\tau' = \gamma(t) d\tau$ where $\gamma(t)$ is a position and time-dependent factor. Gravitational redshift similarly manifests as multiplicative relationships between proper times measured by different observers.
+In General Relativity, the proper time interval $d\tau$ between events transforms under coordinate changes and in gravitational fields according to multiplicative factors. For a coordinate transformation $t \to t'$, local clock rates scale as $d\tau' = \gamma(t) d\tau$ where $\gamma(t)$ is a position and time-dependent factor. In static spacetimes, this manifests as $d\tau = \sqrt{-g_{tt}} dt$ where the metric component provides the multiplicative redshift factor. Gravitational redshift similarly manifests as multiplicative relationships between proper times measured by different observers.
 
 Quantum Mechanics, conversely, evolves quantum states according to the Schrödinger equation:
 \begin{equation}
@@ -23,9 +23,11 @@ I define the log-time coordinate as:
 \begin{equation}
 \sigma = \log\left(\frac{\tau}{\tau_0}\right)
 \end{equation}
-where $\tau$ is proper time and $\tau_0$ is a positive reference scale. Under this transformation, any multiplicative redshift $\tau' = \gamma \tau$ becomes an additive shift $\sigma' = \sigma + \log \gamma$. Crucially, this preserves causal ordering since $d\sigma/d\tau = 1/\tau > 0$ for all $\tau > 0$.
+where $\tau > 0$ is proper time and $\tau_0 > 0$ is a positive reference scale. Throughout we assume $\tau > 0$ along each timelike worldline, so $\sigma = \log(\tau/\tau_0)$ is a $C^1$ bijection $\mathbb{R}^+ \to \mathbb{R}$. All results in Sections 2–3 are therefore reparameterizations of the same dynamics, not modifications of the Hamiltonian theory.
 
-This reparameterization converts General Relativity's multiplicative time structure into an additive form compatible with Quantum Mechanics' phase evolution, while preserving all physical predictions of both theories.
+Under this transformation, any multiplicative redshift $\tau' = \gamma \tau$ becomes an additive shift $\sigma' = \sigma + \log \gamma$. Crucially, this preserves causal ordering since $d\sigma/d\tau = 1/\tau > 0$ for all $\tau > 0$.
+
+This reparameterization converts General Relativity's multiplicative time structure into an additive form compatible with Quantum Mechanics' phase evolution, while preserving all physical predictions of both theories. Note that this $\sigma$-clock transformation leaves physics invariant; the Weyl rescaling explored in §\ref{sec:cosmology} is a distinct geometric analysis.
 
 \subsection{Mathematical Framework Overview}
 
@@ -60,7 +62,7 @@ This computational verification ensures that every theoretical claim I make has 
 
 The LTQG framework I present is a reparameterization approach, not a new physical theory. It preserves the complete mathematical and physical content of both General Relativity and Quantum Mechanics while providing new computational and conceptual tools for their unified treatment. The framework does not resolve all conceptual issues in quantum gravity—such as the measurement problem or the nature of spacetime at the Planck scale—but it does provide a mathematically consistent foundation for addressing temporal aspects of the unification challenge.
 
-I acknowledge several limitations that constitute directions for future research: the geometric analysis beyond scalar curvature requires completion of higher-order invariants, the field theory implementation needs extension to interacting theories and renormalization, and the experimental accessibility of $\sigma$-uniform protocols requires detailed investigation.
+I acknowledge several limitations that constitute directions for future research: the geometric analysis beyond scalar curvature requires completion of higher-order invariants, the field theory implementation needs extension to interacting theories and renormalization, and the experimental accessibility of $\sigma$-uniform protocols requires detailed investigation. Additionally, conformal regularization of curvature (via Weyl rescaling) does not automatically remove physical singularities such as geodesic incompleteness in the original frame.
 
 \subsection{Organization of This Work}
 
