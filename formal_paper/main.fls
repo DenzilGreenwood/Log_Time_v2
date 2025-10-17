@@ -239,6 +239,7 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 OUTPUT main.toc
 INPUT ./sections/introduction.tex
 INPUT ./sections/introduction.tex
@@ -277,7 +278,6 @@ INPUT ./sections/computational_validation.tex
 INPUT ./sections/computational_validation.tex
 INPUT ./sections/computational_validation.tex
 INPUT sections/computational_validation.tex
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./ltqg_core_validation.pdf
 INPUT ./ltqg_core_validation.pdf
 INPUT ./ltqg_core_validation.pdf
@@ -310,6 +310,11 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
+INPUT ./sections/code_repository.tex
+INPUT ./sections/code_repository.tex
+INPUT ./sections/code_repository.tex
+INPUT ./sections/code_repository.tex
+INPUT sections/code_repository.tex
 INPUT ./sections/conclusion.tex
 INPUT ./sections/conclusion.tex
 INPUT ./sections/conclusion.tex
