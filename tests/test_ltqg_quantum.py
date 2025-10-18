@@ -32,7 +32,7 @@ class TestQuantumEvolutionLTQG(LTQGTestCase):
     def setUp(self):
         super().setUp()
         self.evolution = QuantumEvolutionLTQG()
-        self.test_hamiltonians = self.generate_test_hamiltonians()
+        self.test_hamiltonians = self.generate_test_hamiltonians()  # This is now available from LTQGTestCase
     
     def test_initialization(self):
         """Test QuantumEvolutionLTQG initialization."""

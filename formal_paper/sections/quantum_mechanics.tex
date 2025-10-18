@@ -258,4 +258,52 @@ The quantum mechanical results I have established demonstrate that:
 \item \textbf{Operational Consequences}: Different sampling strategies in $\tau$ versus $\sigma$ coordinates can lead to measurably different experimental protocols, providing potential observational signatures.
 \end{itemize}
 
+\subsection{The Problem of Time in Deparameterization}
+\label{subsec:problem_of_time}
+
+The LTQG framework's relationship to canonical quantum gravity reveals a fundamental conceptual limitation regarding the Problem of Time.
+
+\begin{definition}[The Problem of Time]
+In canonical quantum gravity, diffeomorphism invariance leads to the Wheeler-DeWitt constraint:
+\begin{equation}
+\hat{H} \psi = 0
+\end{equation}
+This implies $\partial \psi/\partial t = 0$, creating the ``frozen formalism'' where quantum states appear static, conflicting with physical evolution.
+\end{definition}
+
+\paragraph{LTQG's Deparameterization Approach}
+The framework sidesteps this issue through deparameterization:
+\begin{enumerate}
+\item \textbf{Minisuperspace Context}: The analysis is restricted to cosmological minisuperspace where a global time function $\tau$ (from scalar field $\phi$) can be chosen.
+\item \textbf{Gauge Choice}: The scalar field $\tau$ serves as internal time through gauge choice: $\tau = \tau(\phi)$, not fundamental resolution.
+\item \textbf{Reduced Hamiltonian}: $K(\sigma) = \tau_0 e^\sigma H(\tau_0 e^\sigma)$ becomes the evolution generator after solving the constraint $\hat{H} = 0$ in this gauge.
+\end{enumerate}
+
+\begin{proposition}[Logical Inconsistency in Full Theory]
+\label{prop:logical_inconsistency}
+LTQG cannot simultaneously preserve ``complete physical content of GR'' (including diffeomorphism invariance) and maintain well-defined quantum evolution.
+\end{proposition}
+
+\begin{proof}
+If diffeomorphism invariance is preserved, then $\hat{H} \psi = 0$ must hold, implying:
+\begin{equation}
+\frac{\partial \psi}{\partial t} = 0
+\end{equation}
+But LTQG claims well-defined evolution:
+\begin{equation}
+i\hbar \frac{\partial \psi}{\partial \sigma} = K(\sigma) \psi \neq 0
+\end{equation}
+Since $\sigma = \log(\tau/\tau_0)$ with $\tau$ related to coordinate time, these requirements are logically inconsistent unless diffeomorphism invariance is broken.
+\end{proof}
+
+\paragraph{Limitation Assessment}
+\begin{itemize}
+\item \textbf{Minisuperspace Success}: The deparameterization works effectively in cosmological minisuperspace where global time functions exist.
+\item \textbf{Full Theory Challenge}: Extension to full field theory faces the inability to choose global time functions uniquely due to diffeomorphism invariance.
+\item \textbf{Gauge vs. Fundamental}: The ``solution'' represents a gauge choice rather than fundamental resolution of the constraint algebra.
+\item \textbf{Physical Interpretation}: The framework provides computational tools for minisuperspace quantum cosmology but cannot claim to solve the full Problem of Time.
+\end{itemize}
+
+This analysis establishes that LTQG is a powerful deparameterization technique for minisuperspace applications rather than a fundamental solution to canonical quantum gravity's temporal difficulties.
+
 The mathematical rigor and computational validation ensure that these quantum mechanical foundations provide a solid basis for the cosmological and field theory applications that follow in subsequent sections.

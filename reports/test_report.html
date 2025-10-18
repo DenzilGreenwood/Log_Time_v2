@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LTQG Test Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+        .summary { margin: 20px 0; }
+        .category { margin: 15px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .passed { background-color: #d4edda; }
+        .failed { background-color: #f8d7da; }
+        .error { background-color: #fff3cd; }
+        .details { margin-top: 10px; font-size: 0.9em; }
+        .metric { display: inline-block; margin: 0 20px; }
+        pre { background-color: #f8f9fa; padding: 10px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LTQG Framework Test Report</h1>
+        <p>Generated on: 2025-10-18 14:43:07</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <div class="metric"><strong>Total Tests:</strong> 13</div>
+        <div class="metric"><strong>Passed:</strong> 13</div>
+        <div class="metric"><strong>Failed:</strong> 0</div>
+        <div class="metric"><strong>Errors:</strong> 0</div>
+        <div class="metric"><strong>Success Rate:</strong> 100.0%</div>
+    </div>
+    
+    <h2>Test Categories</h2>
+
+    <div class="category passed">
+        <h3>Core Tests - PASSED</h3>
+        <p><strong>Tests Run:</strong> 3 | 
+           <strong>Failures:</strong> 0 | 
+           <strong>Errors:</strong> 0 | 
+           <strong>Time:</strong> 0.31s</p>
+        <div class="details">
+            <div>[PASS] Log-time transformation round-trip test</div>
+            <div>[PASS] Chain rule validation</div>
+            <div>[PASS] Symbolic invertibility validation</div>
+        </div>
+    </div>
+
+    <div class="category passed">
+        <h3>Quantum Tests - PASSED</h3>
+        <p><strong>Tests Run:</strong> 2 | 
+           <strong>Failures:</strong> 0 | 
+           <strong>Errors:</strong> 0 | 
+           <strong>Time:</strong> 0.00s</p>
+        <div class="details">
+            <div>[PASS] Unitary evolution validation</div>
+            <div>[PASS] Coordinate equivalence validation</div>
+        </div>
+    </div>
+
+    <div class="category passed">
+        <h3>Cosmology Tests - PASSED</h3>
+        <p><strong>Tests Run:</strong> 4 | 
+           <strong>Failures:</strong> 0 | 
+           <strong>Errors:</strong> 0 | 
+           <strong>Time:</strong> 0.00s</p>
+        <div class="details">
+            <div>[PASS] radiation era equation of state</div>
+            <div>[PASS] matter era equation of state</div>
+            <div>[PASS] stiff era equation of state</div>
+            <div>[PASS] Weyl transformation validation</div>
+        </div>
+    </div>
+
+    <div class="category passed">
+        <h3>Qft Tests - PASSED</h3>
+        <p><strong>Tests Run:</strong> 2 | 
+           <strong>Failures:</strong> 0 | 
+           <strong>Errors:</strong> 0 | 
+           <strong>Time:</strong> 0.28s</p>
+        <div class="details">
+            <div>[PASS] QFT mode evolution integration</div>
+            <div>[PASS] QFT sigma-coordinate evolution</div>
+        </div>
+    </div>
+
+    <div class="category passed">
+        <h3>Integration Tests - PASSED</h3>
+        <p><strong>Tests Run:</strong> 2 | 
+           <strong>Failures:</strong> 0 | 
+           <strong>Errors:</strong> 0 | 
+           <strong>Time:</strong> 0.00s</p>
+        <div class="details">
+            <div>[PASS] Cross-module coordinate consistency</div>
+            <div>[PASS] Cosmological parameter consistency</div>
+        </div>
+    </div>
+
+</body>
+</html>

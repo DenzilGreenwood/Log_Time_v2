@@ -1,5 +1,5 @@
 """
-Simple Test Runner for LTQG Framework
+Simple Test Runner for LTQG Framework 
 
 This runner sets up the proper Python path and runs basic validation tests.
 """

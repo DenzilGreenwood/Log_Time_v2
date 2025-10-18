@@ -79,6 +79,8 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -238,6 +240,8 @@ INPUT ./main.toc
 INPUT ./main.toc
 INPUT main.toc
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
@@ -245,8 +249,6 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 OUTPUT main.toc
 INPUT ./sections/introduction.tex
@@ -299,6 +301,15 @@ INPUT ./ltqg_quantum_validation.pdf
 INPUT ./validation_results_table.tex
 INPUT ./validation_results_table.tex
 INPUT validation_results_table.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
 INPUT ./sections/results_discussion.tex
 INPUT ./sections/results_discussion.tex
 INPUT ./sections/results_discussion.tex
@@ -309,15 +320,6 @@ INPUT ./sections/numerical_results_table.tex
 INPUT ./sections/numerical_results_table.tex
 INPUT ./sections/numerical_results_table.tex
 INPUT sections/numerical_results_table.tex
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
 INPUT ./sections/code_repository.tex
 INPUT ./sections/code_repository.tex
 INPUT ./sections/code_repository.tex
@@ -371,6 +373,7 @@ INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb

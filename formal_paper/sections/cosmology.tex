@@ -68,6 +68,39 @@ This result is remarkable: the divergent curvature $R(t) \propto t^{-2}$ becomes
 
 The constancy of $\tilde{R}$ is a conformal-frame statement. It does not, by itself, imply geodesic completeness or remove singular behavior in the original FLRW frame without a specified matter-coupling prescription.
 
+\subsection{Geodesic Completeness Analysis}
+\label{subsec:geodesic_completeness}
+
+While the Weyl transformation achieves curvature regularization, we must examine whether this resolves the fundamental singularity issue of geodesic incompleteness.
+
+\begin{proposition}[Original Frame Geodesic Incompleteness]
+\label{prop:original_geodesic_incompleteness}
+For comoving timelike observers in the original FLRW spacetime with $a(t) = t^p$ where $0 < p < 1$, geodesics remain incomplete despite Weyl-frame curvature regularization.
+\end{proposition}
+
+\begin{proof}
+Comoving timelike geodesics have four-velocity $u^\mu = (1,0,0,0)$ in the original frame. The proper time along such geodesics is:
+\begin{equation}
+\tau = \int_0^t dt' = t
+\end{equation}
+As $t \to 0^+$, we have $\tau \to 0$, indicating that observers reach the Big Bang singularity in finite proper time. The Weyl transformation $\tilde{g}_{\mu\nu} = (1/t^2) g_{\mu\nu}$ modifies the metric but does not extend these geodesics beyond $t = 0$.
+\end{proof}
+
+\begin{proposition}[Null Geodesic Behavior]
+\label{prop:null_geodesic_behavior}
+Radial null geodesics in both frames terminate at finite affine parameter values as they approach the Big Bang.
+\end{proposition}
+
+\begin{proof}
+For radial null geodesics $ds^2 = 0$, we have $dt = \pm a(t) dr$. Integrating from finite time $t_1$ to the singularity at $t = 0$:
+\begin{equation}
+\int_{r_1}^{r_0} dr = \int_{t_1}^0 \frac{dt}{a(t)} = \int_{t_1}^0 \frac{dt}{t^p} = \frac{t_1^{1-p}}{1-p} \quad \text{(for } p < 1 \text{)}
+\end{equation}
+This integral converges, indicating finite coordinate distance to the singularity. The affine parameter analysis yields similar finite limits.
+\end{proof}
+
+\textbf{Physical Interpretation}: The curvature regularization $\tilde{R} = 12(p-1)^2$ represents a mathematical achievement in the Weyl-transformed frame, but geodesic incompleteness persists in the original physical frame where matter follows standard General Relativity. This illustrates the frame-dependence limitation: regularization in one frame does not automatically resolve singularities in another.
+
 \subsection{Physical Interpretation of Curvature Regularization}
 \label{subsec:physical_interpretation}
 
@@ -92,8 +125,50 @@ Different cosmological eras correspond to specific values of the regularized cur
 
 The curvature values provide a geometric signature for different matter content phases in cosmological evolution.
 
-\subsection{Einstein Equations in the Weyl Frame}
-\label{subsec:einstein_equations_weyl}
+\subsection{Frame Dependence and Matter Coupling Prescriptions}
+\label{subsec:frame_dependence}
+
+The Weyl transformation $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$ with $\Omega = 1/t$ is not a diffeomorphism, meaning physics can differ between frames unless matter is conformally invariant. This creates an interpretational choice that affects the physical meaning of curvature regularization.
+
+\begin{table}[htbp]
+\centering
+\caption{Frame-Dependent Physics in LTQG}
+\label{tab:frame_dependence}
+\small
+\begin{tabular}{|p{2.5cm}|p{3.0cm}|p{3.0cm}|p{2.5cm}|}
+\hline
+\textbf{Physical Result} & \textbf{Einstein Frame} & \textbf{Jordan/Weyl Frame} & \textbf{Frame Independent?} \\
+\hline
+Scalar Curvature & $R = 6p(2p-1)t^{-2}$ & $\tilde{R} = 12(p-1)^2$ & No \\
+\hline
+Geodesic Completeness & Incomplete at $t=0$ & Analysis Required & No \\
+\hline
+Matter Coupling & Minimal $\mathcal{L}_m$ & Non-minimal $\tilde{\mathcal{L}}_m$ & No \\
+\hline
+Quantum Mode Evolution & Standard evolution & Modified by $\Omega^2$ & Yes (if massless) \\
+\hline
+Cosmological Parameters & Standard inference & Modified interpretation & Analysis Dependent \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Safe Application Domain}: The framework's predictions are most reliable for:
+\begin{itemize}
+\item Radiation-dominated era ($p = 1/2$) with massless fields
+\item Quantum field modes in conformally flat backgrounds  
+\item Computational applications where frame choice is explicitly specified
+\item Minisuperspace models with scalar field internal time
+\end{itemize}
+
+\textbf{Prescription Required}: To determine which frame contains the ``real'' physics, one must specify:
+\begin{enumerate}
+\item Whether matter couples minimally (Einstein frame) or non-minimally (Jordan frame)
+\item How to interpret geodesic completeness across frames  
+\item Which curvature quantities are physically meaningful
+\item How to relate observations to theoretical predictions
+\end{enumerate}
+
+This frame-dependence limitation prevents LTQG from making unambiguous physical claims about singularity resolution.
 
 The Weyl-transformed spacetime satisfies modified Einstein equations that I derive from the conformal transformation properties.
 

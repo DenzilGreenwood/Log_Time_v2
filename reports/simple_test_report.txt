@@ -1,6 +1,6 @@
 
 LTQG Framework Test Report
-Generated: 2025-10-18 13:59:36
+Generated: 2025-10-18 14:42:29
 
 ============================================================
 TEST SUMMARY

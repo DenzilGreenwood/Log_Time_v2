@@ -1,0 +1,72 @@
+{
+  "summary": {},
+  "categories": {
+    "core": {
+      "status": "PASSED",
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_time": 0.30971264839172363,
+      "details": [
+        "[PASS] Log-time transformation round-trip test",
+        "[PASS] Chain rule validation",
+        "[PASS] Symbolic invertibility validation"
+      ]
+    },
+    "quantum": {
+      "status": "PASSED",
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_time": 0.0009851455688476562,
+      "details": [
+        "\u2713 Unitary evolution validation",
+        "\u2713 Coordinate equivalence validation"
+      ]
+    },
+    "cosmology": {
+      "status": "PASSED",
+      "tests_run": 4,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_time": 0.0009992122650146484,
+      "details": [
+        "\u2713 radiation era equation of state",
+        "\u2713 matter era equation of state",
+        "\u2713 stiff era equation of state",
+        "\u2713 Weyl transformation validation"
+      ]
+    },
+    "qft": {
+      "status": "PASSED",
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_time": 0.27603936195373535,
+      "details": [
+        "\u2713 QFT mode evolution integration",
+        "\u2713 QFT sigma-coordinate evolution"
+      ]
+    },
+    "integration": {
+      "status": "PASSED",
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_time": 0.0,
+      "details": [
+        "\u2713 Cross-module coordinate consistency",
+        "\u2713 Cosmological parameter consistency"
+      ]
+    }
+  },
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "timing": {},
+  "execution_info": {
+    "timestamp": "2025-10-18 14:43:07",
+    "total_tests": 13,
+    "total_time": 0.5877363681793213
+  }
+}
