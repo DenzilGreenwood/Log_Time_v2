@@ -121,18 +121,55 @@ The regularized early universe dynamics suggest potential observational conseque
 \subsection{Limitations and Future Research Directions}
 \label{subsec:limitations_future}
 
-While the LTQG framework achieves its primary objectives, several areas require future development:
+While the LTQG framework achieves its primary objectives, it faces \textbf{two fundamental conceptual limitations} that prevent it from being a complete solution to the quantum gravity problem:
+
+\subsubsection{Fundamental Conceptual Limitations}
+
+\paragraph{1. Ambiguity of Singularity Resolution}
+The framework's claim to ``curvature regularization'' is mathematically correct but physically ambiguous. The core issue is that \textbf{curvature regularization is not equivalent to geodesic completeness}:
+
+\begin{itemize}
+\item \textbf{What LTQG achieves}: Conversion of divergent FLRW scalar curvature $R(t) \propto t^{-2}$ into finite constant $\tilde{R} = 12(p-1)^2$ through Weyl transformation
+\item \textbf{What remains unresolved}: Geodesic incompleteness in the original spacetime frame, where freely falling observers still reach the Big Bang singularity in finite proper time
+\item \textbf{Frame-dependence problem}: The regularization occurs only in the Weyl-transformed frame $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, which is \textbf{not} a diffeomorphism. Different frames yield different geodesic completeness properties, requiring a matter coupling prescription to determine which frame contains the ``real'' physics.
+\end{itemize}
+
+\paragraph{2. The Problem of Time in Reparameterization Approaches}
+The LTQG framework fundamentally sidesteps rather than resolves the ``Problem of Time'' in canonical quantum gravity:
+
+\begin{itemize}
+\item \textbf{Preserved diffeomorphism invariance}: LTQG claims to preserve the ``complete content'' of General Relativity, including diffeomorphism invariance
+\item \textbf{Hamiltonian constraint}: This implies the Wheeler-DeWitt constraint $\hat{H}\psi = 0$ must still hold, leading to the ``frozen formalism'' where $\partial\psi/\partial t = 0$
+\item \textbf{Logical inconsistency}: The framework cannot simultaneously have $\hat{H} = 0$ (from diffeomorphism invariance) and well-defined evolution generator $\hat{K}(\sigma) \neq 0$
+\item \textbf{Deparameterization limitation}: The scalar field $\tau$ serves as an internal clock through gauge choice, not fundamental resolution. This works in minisuperspace but becomes problematic in full field theory where global time functions cannot be chosen uniquely.
+\end{itemize}
+
+\subsubsection{Scope and Classification}
+
+Based on this analysis, the LTQG framework should be understood as:
+\begin{itemize}
+\item[$\checkmark$] A sophisticated reparameterization technique providing computational advantages
+\item[$\checkmark$] A powerful tool for cosmological research with improved numerical stability  
+\item[$\checkmark$] An elegant solution to specific temporal coordination problems
+\item[$\times$] \textbf{NOT} a fundamental theory of quantum gravity
+\item[$\times$] \textbf{NOT} a complete resolution of spacetime singularities
+\item[$\times$] \textbf{NOT} a solution to the Problem of Time
+\end{itemize}
 
 \subsubsection{Immediate Extensions}
 
 \begin{enumerate}
+\item \textbf{Geodesic Completeness Analysis}: Systematic investigation of geodesic completeness in both original and Weyl frames with explicit matter coupling prescriptions.
+
+\item \textbf{Frame-Dependence Resolution}: Development of observational tests to discriminate between Einstein frame (minimal coupling) and Jordan frame (non-minimal coupling) interpretations.
+
+\item \textbf{Deparameterization Analysis}: Investigation of the relationship between internal time $\tau$ and the full constraint structure beyond minisuperspace.
+
 \item \textbf{Complete Geometric Analysis}: Extension beyond scalar curvature to full Riemann tensor analysis for all geometric invariants and their regularization properties.
 
 \item \textbf{Black Hole Spacetimes}: Application of the framework to Schwarzschild, Kerr, and other black hole geometries to investigate horizon structure and singularity resolution.
 
 \item \textbf{Interacting Field Theories}: Development of renormalization procedures for interacting quantum field theories in log-time coordinates.
-
-\item \textbf{Higher-Dimensional Extensions}: Investigation of the framework's behavior in higher-dimensional spacetimes and string theory applications.
 \end{enumerate}
 
 \subsubsection{Advanced Theoretical Development}
@@ -205,18 +242,51 @@ However, the framework remains a reparameterization approach rather than a funda
 \subsection{Final Assessment}
 \label{subsec:final_assessment}
 
-The Log-Time Quantum Gravity framework successfully achieves its primary objective: providing a mathematically rigorous bridge between General Relativity and Quantum Mechanics through temporal reparameterization. The key accomplishments include:
+The Log-Time Quantum Gravity framework successfully achieves its primary objective as a \textbf{reparameterization approach}: providing a mathematically rigorous bridge between General Relativity and Quantum Mechanics through temporal coordinate transformation. However, this assessment must acknowledge both achievements and fundamental limitations.
 
+\paragraph{Key Accomplishments}
 \begin{itemize}
-\item \textbf{Complete Theoretical Development}: From mathematical foundations through quantum field theory applications
-\item \textbf{Rigorous Validation}: Comprehensive computational verification of all theoretical claims
+\item \textbf{Temporal Coordination}: Elegant resolution of the multiplicative-additive temporal clash between GR and QM
+\item \textbf{Mathematical Rigor}: Complete theoretical development with comprehensive computational verification
+\item \textbf{Curvature Regularization}: Finite scalar curvature in the Weyl-transformed frame
+\item \textbf{Computational Framework}: Robust numerical methods with improved stability near classical singularities
 \item \textbf{Preserved Physics}: Maintenance of all existing physical predictions and experimental connections
-\item \textbf{Practical Utility}: Immediate applications to computational physics and numerical calculations
-\item \textbf{Research Foundation}: Solid basis for future investigations in quantum gravity and cosmology
 \end{itemize}
 
-The framework demonstrates that the multiplicative-additive temporal clash between General Relativity and Quantum Mechanics can be resolved through coordinate choice, while the systematic regularization of cosmological singularities provides new tools for early universe physics. The comprehensive computational validation ensures that all theoretical claims are verified to appropriate precision, establishing confidence in the framework's reliability.
+\paragraph{Fundamental Limitations}
+\begin{itemize}
+\item \textbf{Singularity Resolution Ambiguity}: Curvature regularization does not resolve geodesic incompleteness in the original frame; frame-dependence requires matter coupling prescription
+\item \textbf{Problem of Time}: Deparameterization sidesteps but does not resolve the fundamental issue arising from diffeomorphism invariance; logical inconsistency between preserved general covariance and well-defined evolution
+\item \textbf{Minisuperspace Restriction}: Full field theory extension faces conceptual challenges due to inability to choose global time functions uniquely
+\item \textbf{Interpretational Ambiguities}: Physical interpretation requires external prescriptions not determined by the framework itself
+\end{itemize}
 
-While limitations remain and future work is needed for complete theoretical closure, the LTQG framework provides valuable tools for current research in fundamental physics and serves as a foundation for future developments in quantum gravity, cosmology, and quantum field theory on curved spacetime.
+\paragraph{Framework Classification}
+LTQG represents a \textbf{highly effective and mathematically rigorous tool} for addressing specific aspects of the quantum gravity problem, particularly temporal coordination in cosmological contexts. It provides:
+\begin{itemize}
+\item Powerful computational methods for early universe research
+\item Improved numerical stability near classical singularities
+\item Educational insights into quantum-gravitational phenomena
+\item Foundation for future theoretical developments
+\end{itemize}
+
+However, \textbf{a complete theory of quantum gravity} must ultimately:
+\begin{itemize}
+\item Provide frame-independent singularity resolution
+\item Fundamentally address the Problem of Time
+\item Extend successfully beyond minisuperspace
+\item Make experimentally testable predictions distinguishing it from existing theories
+\end{itemize}
+
+\paragraph{Scientific Impact}
+The LTQG framework makes significant contributions to quantum gravity research by:
+\begin{itemize}
+\item Demonstrating that temporal incompatibilities can be resolved through coordinate choice
+\item Providing new computational tools for cosmological physics
+\item Establishing standards for rigorous validation in theoretical physics
+\item Identifying specific conceptual challenges that remain unresolved
+\end{itemize}
+
+While LTQG does not constitute a fundamental solution to quantum gravity, it represents an important step toward such a theory, providing valuable tools and insights while honestly acknowledging the conceptual challenges that remain unresolved. This honest assessment enables appropriate use of the framework within its proper scope while clearly identifying directions for future fundamental research.
 
 This work illustrates that mathematical reparameterization, when applied systematically and validated comprehensively, can provide significant insights into fundamental physics problems while preserving the empirical successes of existing theories. The Log-Time Quantum Gravity framework thus represents a meaningful contribution to our understanding of spacetime, quantum mechanics, and their unified treatment in fundamental physics.

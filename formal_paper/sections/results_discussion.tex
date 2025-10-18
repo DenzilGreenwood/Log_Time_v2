@@ -215,40 +215,57 @@ The framework suggests potential observational signatures:
 \subsection{Limitations and Outstanding Questions}
 \label{subsec:limitations_questions}
 
-While the LTQG framework achieves its primary goals, several limitations and open questions remain:
+While the LTQG framework achieves its primary goals, it faces \textbf{two fundamental conceptual limitations} that constrain its scope as a complete solution to quantum gravity:
 
-\subsubsection{Theoretical Limitations}
+\subsubsection{Fundamental Conceptual Limitations}
+
+\paragraph{1. Ambiguity of Singularity Resolution}
+The framework's ``curvature regularization'' claim requires careful physical interpretation:
+
+\begin{itemize}
+\item \textbf{Mathematical achievement}: LTQG successfully converts divergent FLRW scalar curvature $R(t) \propto t^{-2}$ into finite constant $\tilde{R} = 12(p-1)^2$ through Weyl transformation
+\item \textbf{Physical limitation}: Curvature regularization does not automatically resolve geodesic incompleteness—the fundamental definition of spacetime singularities
+\item \textbf{Frame-dependence problem}: The regularization occurs only in the Weyl-transformed frame $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, which is not a diffeomorphism. Different frames yield different physics, requiring matter coupling prescriptions to determine which frame contains the ``real'' physics
+\item \textbf{Unresolved issue}: Freely falling observers in the original frame still reach the Big Bang in finite proper time
+\end{itemize}
+
+\paragraph{2. The Problem of Time in Reparameterization Approaches}
+The framework sidesteps rather than resolves the fundamental ``Problem of Time'' in canonical quantum gravity:
+
+\begin{itemize}
+\item \textbf{Preserved diffeomorphism invariance}: LTQG claims to preserve the ``complete content'' of General Relativity, including general covariance
+\item \textbf{Constraint persistence}: This implies the Wheeler-DeWitt constraint $\hat{H}\psi = 0$ must still hold, leading to the ``frozen formalism''
+\item \textbf{Logical inconsistency}: Cannot simultaneously have $\hat{H} = 0$ (from diffeomorphism invariance) and well-defined evolution generator $\hat{K}(\sigma) \neq 0$
+\item \textbf{Deparameterization limitation}: The scalar field $\tau$ serves as internal clock through gauge choice, not fundamental resolution. This works in minisuperspace but becomes problematic in full field theory
+\end{itemize}
+
+\subsubsection{Additional Theoretical Limitations}
 
 \begin{enumerate}
-\item \textbf{Geometric Completeness}: The analysis focuses primarily on scalar curvature; complete tensor analysis requires extension to all curvature components.
+\item \textbf{Minisuperspace Restriction}: Full field theory extension faces conceptual challenges due to inability to choose global time functions uniquely in the presence of full diffeomorphism invariance.
+
+\item \textbf{Matter Coupling Ambiguity}: Physical interpretation requires external prescription for Einstein frame (minimal coupling) vs. Jordan frame (non-minimal coupling) without fundamental principle for selection.
+
+\item \textbf{Clock Choice Arbitrariness}: No fundamental principle determines why scalar field $\tau$ should serve as internal time rather than other possible clocks.
+
+\item \textbf{Geometric Completeness}: The analysis focuses primarily on scalar curvature; complete tensor analysis requires extension to all curvature components and their frame-dependence properties.
 
 \item \textbf{Higher Dimensions}: The framework is developed for four-dimensional spacetime; extension to higher dimensions requires investigation.
 
 \item \textbf{Non-Trivial Topologies}: Applications to spacetimes with non-trivial topology (black holes, wormholes) need development.
-
-\item \textbf{Full Field Theory}: Extension beyond minisuperspace to complete field theory requires addressing infinitely many degrees of freedom.
 \end{enumerate}
 
-\subsubsection{Physical Questions}
+\subsubsection{Framework Classification}
 
+This analysis establishes LTQG as:
 \begin{itemize}
-\item \textbf{Frame Dependence}: The physical significance of the Weyl-transformed frame requires clarification regarding matter coupling prescriptions. The curvature regularization $\tilde{R} = 12(p-1)^2$ occurs in the conformal frame and does not automatically imply resolution of physical singularities in the original Einstein frame without specifying how matter fields couple in each frame.
-
-\item \textbf{Quantum Gravity Scale}: The relationship between the framework and Planck-scale physics needs investigation.
-
-\item \textbf{Information Paradox}: Applications to black hole information paradox and related quantum gravity issues require development.
-
-\item \textbf{Emergent Spacetime}: The framework's relationship to emergent spacetime scenarios needs exploration.
+\item[$\checkmark$] A sophisticated reparameterization technique with computational advantages
+\item[$\checkmark$] A powerful tool for cosmological research and early universe physics
+\item[$\checkmark$] An elegant solution to specific temporal coordination problems  
+\item[$\times$] \textbf{NOT} a fundamental theory of quantum gravity
+\item[$\times$] \textbf{NOT} a complete resolution of spacetime singularities
+\item[$\times$] \textbf{NOT} a solution to the Problem of Time
 \end{itemize}
-
-\subsubsection{Computational Challenges}
-
-\begin{enumerate}
-\item \textbf{High-Precision Requirements}: Some applications require extremely high numerical precision, challenging standard algorithms.
-\item \textbf{Multi-Scale Integration}: Simultaneous treatment of multiple time scales can be computationally demanding.
-\item \textbf{Memory Requirements}: Long-time evolution calculations may require significant computational resources.
-\item \textbf{Parallel Scalability}: Optimal parallel algorithms for log-time calculations need development.
-\end{enumerate}
 
 \subsection{Comparison with Alternative Approaches}
 \label{subsec:alternative_comparison}

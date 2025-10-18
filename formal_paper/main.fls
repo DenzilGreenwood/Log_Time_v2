@@ -79,6 +79,14 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
+INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx
 INPUT c:/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty

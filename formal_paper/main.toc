@@ -106,103 +106,113 @@
 \contentsline {subsubsection}{\numberline {7.5.1}Measurement Protocol Distinctions}{41}{subsubsection.7.5.1}%
 \contentsline {subsubsection}{\numberline {7.5.2}Cosmological Observations}{42}{subsubsection.7.5.2}%
 \contentsline {subsection}{\numberline {7.6}Limitations and Outstanding Questions}{42}{subsection.7.6}%
-\contentsline {subsubsection}{\numberline {7.6.1}Theoretical Limitations}{42}{subsubsection.7.6.1}%
-\contentsline {subsubsection}{\numberline {7.6.2}Physical Questions}{42}{subsubsection.7.6.2}%
-\contentsline {subsubsection}{\numberline {7.6.3}Computational Challenges}{43}{subsubsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.1}Fundamental Conceptual Limitations}{42}{subsubsection.7.6.1}%
+\contentsline {paragraph}{1. Ambiguity of Singularity Resolution}{42}{section*.16}%
+\contentsline {paragraph}{2. The Problem of Time in Reparameterization Approaches}{42}{section*.17}%
+\contentsline {subsubsection}{\numberline {7.6.2}Additional Theoretical Limitations}{43}{subsubsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.3}Framework Classification}{43}{subsubsection.7.6.3}%
 \contentsline {subsection}{\numberline {7.7}Comparison with Alternative Approaches}{43}{subsection.7.7}%
 \contentsline {subsection}{\numberline {7.8}Future Research Directions}{43}{subsection.7.8}%
 \contentsline {subsubsection}{\numberline {7.8.1}Immediate Extensions}{43}{subsubsection.7.8.1}%
 \contentsline {subsubsection}{\numberline {7.8.2}Long-Term Investigations}{44}{subsubsection.7.8.2}%
 \contentsline {subsection}{\numberline {7.9}Broader Impact and Significance}{44}{subsection.7.9}%
 \contentsline {subsubsection}{\numberline {7.9.1}Conceptual Contributions}{44}{subsubsection.7.9.1}%
-\contentsline {subsubsection}{\numberline {7.9.2}Methodological Innovations}{44}{subsubsection.7.9.2}%
-\contentsline {subsection}{\numberline {7.10}Conclusion of Results and Discussion}{44}{subsection.7.10}%
+\contentsline {subsubsection}{\numberline {7.9.2}Methodological Innovations}{45}{subsubsection.7.9.2}%
+\contentsline {subsection}{\numberline {7.10}Conclusion of Results and Discussion}{45}{subsection.7.10}%
 \contentsline {section}{\numberline {8}Code Repository and Reproducible Research}{45}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Open Source Implementation}{45}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Repository Structure}{45}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Core Implementation (\texttt {ltqg/})}{45}{subsubsection.8.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.2}Documentation and Examples}{45}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Core Implementation (\texttt {ltqg/})}{46}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Documentation and Examples}{46}{subsubsection.8.2.2}%
 \contentsline {subsubsection}{\numberline {8.2.3}Formal Documentation (\texttt {formal\_paper/})}{46}{subsubsection.8.2.3}%
-\contentsline {subsubsection}{\numberline {8.2.4}Testing and Validation (\texttt {tests/})}{46}{subsubsection.8.2.4}%
-\contentsline {subsection}{\numberline {8.3}Reproducibility Standards}{46}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Version Control and Documentation}{46}{subsubsection.8.3.1}%
-\contentsline {subsubsection}{\numberline {8.3.2}Computational Environment}{46}{subsubsection.8.3.2}%
-\contentsline {subsubsection}{\numberline {8.3.3}Validation and Testing}{46}{subsubsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.4}Educational Resources}{46}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.2.4}Testing and Validation (\texttt {tests/})}{47}{subsubsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.3}Reproducibility Standards}{47}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Version Control and Documentation}{47}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Computational Environment}{47}{subsubsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3}Validation and Testing}{47}{subsubsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.4}Educational Resources}{47}{subsection.8.4}%
 \contentsline {subsubsection}{\numberline {8.4.1}Interactive Notebooks}{47}{subsubsection.8.4.1}%
-\contentsline {subsubsection}{\numberline {8.4.2}Mathematical Documentation}{47}{subsubsection.8.4.2}%
-\contentsline {subsubsection}{\numberline {8.4.3}Usage Examples}{47}{subsubsection.8.4.3}%
-\contentsline {subsection}{\numberline {8.5}Research Applications}{47}{subsection.8.5}%
-\contentsline {subsubsection}{\numberline {8.5.1}Computational Cosmology}{47}{subsubsection.8.5.1}%
-\contentsline {subsubsection}{\numberline {8.5.2}Quantum Field Theory Calculations}{47}{subsubsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.4.2}Mathematical Documentation}{48}{subsubsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.3}Usage Examples}{48}{subsubsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.5}Research Applications}{48}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Computational Cosmology}{48}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Quantum Field Theory Calculations}{48}{subsubsection.8.5.2}%
 \contentsline {subsubsection}{\numberline {8.5.3}Numerical Relativity}{48}{subsubsection.8.5.3}%
 \contentsline {subsection}{\numberline {8.6}Community Contributions}{48}{subsection.8.6}%
-\contentsline {subsubsection}{\numberline {8.6.1}Development Guidelines}{48}{subsubsection.8.6.1}%
-\contentsline {subsubsection}{\numberline {8.6.2}Extension Framework}{48}{subsubsection.8.6.2}%
-\contentsline {subsubsection}{\numberline {8.6.3}Collaborative Research}{48}{subsubsection.8.6.3}%
-\contentsline {subsection}{\numberline {8.7}Future Development Roadmap}{48}{subsection.8.7}%
-\contentsline {subsubsection}{\numberline {8.7.1}Short-term Goals (6-12 months)}{48}{subsubsection.8.7.1}%
+\contentsline {subsubsection}{\numberline {8.6.1}Development Guidelines}{49}{subsubsection.8.6.1}%
+\contentsline {subsubsection}{\numberline {8.6.2}Extension Framework}{49}{subsubsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.3}Collaborative Research}{49}{subsubsection.8.6.3}%
+\contentsline {subsection}{\numberline {8.7}Future Development Roadmap}{49}{subsection.8.7}%
+\contentsline {subsubsection}{\numberline {8.7.1}Short-term Goals (6-12 months)}{49}{subsubsection.8.7.1}%
 \contentsline {subsubsection}{\numberline {8.7.2}Medium-term Goals (1-2 years)}{49}{subsubsection.8.7.2}%
-\contentsline {subsubsection}{\numberline {8.7.3}Long-term Vision (2+ years)}{49}{subsubsection.8.7.3}%
-\contentsline {subsection}{\numberline {8.8}Technical Specifications}{49}{subsection.8.8}%
-\contentsline {subsubsection}{\numberline {8.8.1}System Requirements}{49}{subsubsection.8.8.1}%
-\contentsline {subsubsection}{\numberline {8.8.2}Performance Characteristics}{49}{subsubsection.8.8.2}%
-\contentsline {subsubsection}{\numberline {8.8.3}Quality Assurance}{49}{subsubsection.8.8.3}%
+\contentsline {subsubsection}{\numberline {8.7.3}Long-term Vision (2+ years)}{50}{subsubsection.8.7.3}%
+\contentsline {subsection}{\numberline {8.8}Technical Specifications}{50}{subsection.8.8}%
+\contentsline {subsubsection}{\numberline {8.8.1}System Requirements}{50}{subsubsection.8.8.1}%
+\contentsline {subsubsection}{\numberline {8.8.2}Performance Characteristics}{50}{subsubsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.3}Quality Assurance}{50}{subsubsection.8.8.3}%
 \contentsline {subsection}{\numberline {8.9}Citation and Academic Use}{50}{subsection.8.9}%
-\contentsline {section}{\numberline {9}Conclusion}{50}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Principal Achievements}{50}{subsection.9.1}%
-\contentsline {subsubsection}{\numberline {9.1.1}Mathematical Foundation}{50}{subsubsection.9.1.1}%
-\contentsline {subsubsection}{\numberline {9.1.2}Quantum Mechanical Equivalence}{50}{subsubsection.9.1.2}%
-\contentsline {subsubsection}{\numberline {9.1.3}Cosmological Regularization}{51}{subsubsection.9.1.3}%
-\contentsline {subsubsection}{\numberline {9.1.4}Quantum Field Theory Extensions}{51}{subsubsection.9.1.4}%
-\contentsline {subsection}{\numberline {9.2}Theoretical Significance}{51}{subsection.9.2}%
-\contentsline {paragraph}{Unification Methodology}{51}{section*.16}%
-\contentsline {paragraph}{Temporal Structure Analysis}{51}{section*.17}%
-\contentsline {paragraph}{Regularization Principles}{51}{section*.18}%
-\contentsline {paragraph}{Computational Physics Integration}{52}{section*.19}%
+\contentsline {section}{\numberline {9}Conclusion}{51}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Principal Achievements}{51}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Mathematical Foundation}{51}{subsubsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.2}Quantum Mechanical Equivalence}{51}{subsubsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.3}Cosmological Regularization}{52}{subsubsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.4}Quantum Field Theory Extensions}{52}{subsubsection.9.1.4}%
+\contentsline {subsection}{\numberline {9.2}Theoretical Significance}{52}{subsection.9.2}%
+\contentsline {paragraph}{Unification Methodology}{52}{section*.18}%
+\contentsline {paragraph}{Temporal Structure Analysis}{52}{section*.19}%
+\contentsline {paragraph}{Regularization Principles}{52}{section*.20}%
+\contentsline {paragraph}{Computational Physics Integration}{52}{section*.21}%
 \contentsline {subsection}{\numberline {9.3}Practical Applications and Computational Advantages}{52}{subsection.9.3}%
-\contentsline {subsubsection}{\numberline {9.3.1}Numerical Relativity}{52}{subsubsection.9.3.1}%
-\contentsline {subsubsection}{\numberline {9.3.2}Quantum Field Theory Calculations}{52}{subsubsection.9.3.2}%
-\contentsline {subsubsection}{\numberline {9.3.3}Cosmological Parameter Inference}{52}{subsubsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.4}Experimental and Observational Implications}{52}{subsection.9.4}%
-\contentsline {subsubsection}{\numberline {9.4.1}Operational Distinctions}{52}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.3.1}Numerical Relativity}{53}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}Quantum Field Theory Calculations}{53}{subsubsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3}Cosmological Parameter Inference}{53}{subsubsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.4}Experimental and Observational Implications}{53}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}Operational Distinctions}{53}{subsubsection.9.4.1}%
 \contentsline {subsubsection}{\numberline {9.4.2}Cosmological Signatures}{53}{subsubsection.9.4.2}%
-\contentsline {subsection}{\numberline {9.5}Limitations and Future Research Directions}{53}{subsection.9.5}%
-\contentsline {subsubsection}{\numberline {9.5.1}Immediate Extensions}{53}{subsubsection.9.5.1}%
-\contentsline {subsubsection}{\numberline {9.5.2}Advanced Theoretical Development}{53}{subsubsection.9.5.2}%
-\contentsline {subsubsection}{\numberline {9.5.3}Experimental and Observational Programs}{53}{subsubsection.9.5.3}%
-\contentsline {subsection}{\numberline {9.6}Broader Impact on Physics}{53}{subsection.9.6}%
-\contentsline {subsubsection}{\numberline {9.6.1}Methodological Contributions}{54}{subsubsection.9.6.1}%
-\contentsline {subsubsection}{\numberline {9.6.2}Educational Value}{54}{subsubsection.9.6.2}%
-\contentsline {subsubsection}{\numberline {9.6.3}Interdisciplinary Applications}{54}{subsubsection.9.6.3}%
-\contentsline {subsection}{\numberline {9.7}Assessment of Framework Maturity}{54}{subsection.9.7}%
-\contentsline {paragraph}{Mathematical Rigor}{54}{section*.20}%
-\contentsline {paragraph}{Physical Consistency}{54}{section*.21}%
-\contentsline {paragraph}{Computational Implementation}{54}{section*.22}%
-\contentsline {paragraph}{Research Readiness}{55}{section*.23}%
-\contentsline {subsection}{\numberline {9.8}Final Assessment}{55}{subsection.9.8}%
-\contentsline {section}{\numberline {A}Mathematical Proofs and Derivations}{58}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Proof of Asymptotic Silence for General Hamiltonians}{58}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Complete Derivation of Weyl-Transformed Curvature}{59}{subsection.A.2}%
-\contentsline {subsection}{\numberline {A.3}Wronskian Conservation Proof in Log-Time Coordinates}{61}{subsection.A.3}%
-\contentsline {section}{\numberline {B}Computational Implementation Details}{61}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Software Architecture Overview}{62}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Numerical Integration Methods}{62}{subsection.B.2}%
-\contentsline {subsubsection}{\numberline {B.2.1}Adaptive Runge-Kutta Methods}{62}{subsubsection.B.2.1}%
-\contentsline {subsubsection}{\numberline {B.2.2}Symplectic Integration for Hamiltonian Systems}{63}{subsubsection.B.2.2}%
-\contentsline {subsubsection}{\numberline {B.2.3}Stiff ODE Methods}{63}{subsubsection.B.2.3}%
-\contentsline {subsection}{\numberline {B.3}Symbolic Computation Implementation}{63}{subsection.B.3}%
-\contentsline {subsubsection}{\numberline {B.3.1}Curvature Tensor Calculation}{63}{subsubsection.B.3.1}%
-\contentsline {subsubsection}{\numberline {B.3.2}Weyl Transformation Verification}{64}{subsubsection.B.3.2}%
-\contentsline {subsection}{\numberline {B.4}High-Precision Arithmetic}{65}{subsection.B.4}%
-\contentsline {subsection}{\numberline {B.5}Parallel Computing Implementation}{66}{subsection.B.5}%
-\contentsline {subsection}{\numberline {B.6}Error Analysis and Convergence Testing}{66}{subsection.B.6}%
-\contentsline {subsubsection}{\numberline {B.6.1}Richardson Extrapolation}{66}{subsubsection.B.6.1}%
-\contentsline {subsubsection}{\numberline {B.6.2}Adaptive Error Control}{67}{subsubsection.B.6.2}%
-\contentsline {subsection}{\numberline {B.7}Reproducibility Protocols}{68}{subsection.B.7}%
-\contentsline {subsubsection}{\numberline {B.7.1}Deterministic Random Number Generation}{68}{subsubsection.B.7.1}%
-\contentsline {subsubsection}{\numberline {B.7.2}Environment Documentation}{69}{subsubsection.B.7.2}%
-\contentsline {subsection}{\numberline {B.8}Performance Optimization}{69}{subsection.B.8}%
-\contentsline {subsubsection}{\numberline {B.8.1}Vectorized Operations}{69}{subsubsection.B.8.1}%
-\contentsline {subsubsection}{\numberline {B.8.2}Memory-Efficient Algorithms}{70}{subsubsection.B.8.2}%
-\contentsline {subsection}{\numberline {B.9}Testing and Continuous Integration}{71}{subsection.B.9}%
+\contentsline {subsection}{\numberline {9.5}Limitations and Future Research Directions}{54}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}Fundamental Conceptual Limitations}{54}{subsubsection.9.5.1}%
+\contentsline {paragraph}{1. Ambiguity of Singularity Resolution}{54}{section*.22}%
+\contentsline {paragraph}{2. The Problem of Time in Reparameterization Approaches}{54}{section*.23}%
+\contentsline {subsubsection}{\numberline {9.5.2}Scope and Classification}{54}{subsubsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.3}Immediate Extensions}{55}{subsubsection.9.5.3}%
+\contentsline {subsubsection}{\numberline {9.5.4}Advanced Theoretical Development}{55}{subsubsection.9.5.4}%
+\contentsline {subsubsection}{\numberline {9.5.5}Experimental and Observational Programs}{55}{subsubsection.9.5.5}%
+\contentsline {subsection}{\numberline {9.6}Broader Impact on Physics}{55}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}Methodological Contributions}{55}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}Educational Value}{56}{subsubsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.3}Interdisciplinary Applications}{56}{subsubsection.9.6.3}%
+\contentsline {subsection}{\numberline {9.7}Assessment of Framework Maturity}{56}{subsection.9.7}%
+\contentsline {paragraph}{Mathematical Rigor}{56}{section*.24}%
+\contentsline {paragraph}{Physical Consistency}{56}{section*.25}%
+\contentsline {paragraph}{Computational Implementation}{56}{section*.26}%
+\contentsline {paragraph}{Research Readiness}{56}{section*.27}%
+\contentsline {subsection}{\numberline {9.8}Final Assessment}{57}{subsection.9.8}%
+\contentsline {paragraph}{Key Accomplishments}{57}{section*.28}%
+\contentsline {paragraph}{Fundamental Limitations}{57}{section*.29}%
+\contentsline {paragraph}{Framework Classification}{57}{section*.30}%
+\contentsline {paragraph}{Scientific Impact}{58}{section*.31}%
+\contentsline {section}{\numberline {A}Mathematical Proofs and Derivations}{60}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Proof of Asymptotic Silence for General Hamiltonians}{61}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Complete Derivation of Weyl-Transformed Curvature}{62}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Wronskian Conservation Proof in Log-Time Coordinates}{63}{subsection.A.3}%
+\contentsline {section}{\numberline {B}Computational Implementation Details}{64}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Software Architecture Overview}{64}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Numerical Integration Methods}{65}{subsection.B.2}%
+\contentsline {subsubsection}{\numberline {B.2.1}Adaptive Runge-Kutta Methods}{65}{subsubsection.B.2.1}%
+\contentsline {subsubsection}{\numberline {B.2.2}Symplectic Integration for Hamiltonian Systems}{65}{subsubsection.B.2.2}%
+\contentsline {subsubsection}{\numberline {B.2.3}Stiff ODE Methods}{66}{subsubsection.B.2.3}%
+\contentsline {subsection}{\numberline {B.3}Symbolic Computation Implementation}{66}{subsection.B.3}%
+\contentsline {subsubsection}{\numberline {B.3.1}Curvature Tensor Calculation}{66}{subsubsection.B.3.1}%
+\contentsline {subsubsection}{\numberline {B.3.2}Weyl Transformation Verification}{67}{subsubsection.B.3.2}%
+\contentsline {subsection}{\numberline {B.4}High-Precision Arithmetic}{68}{subsection.B.4}%
+\contentsline {subsection}{\numberline {B.5}Parallel Computing Implementation}{68}{subsection.B.5}%
+\contentsline {subsection}{\numberline {B.6}Error Analysis and Convergence Testing}{69}{subsection.B.6}%
+\contentsline {subsubsection}{\numberline {B.6.1}Richardson Extrapolation}{69}{subsubsection.B.6.1}%
+\contentsline {subsubsection}{\numberline {B.6.2}Adaptive Error Control}{70}{subsubsection.B.6.2}%
+\contentsline {subsection}{\numberline {B.7}Reproducibility Protocols}{71}{subsection.B.7}%
+\contentsline {subsubsection}{\numberline {B.7.1}Deterministic Random Number Generation}{71}{subsubsection.B.7.1}%
+\contentsline {subsubsection}{\numberline {B.7.2}Environment Documentation}{72}{subsubsection.B.7.2}%
+\contentsline {subsection}{\numberline {B.8}Performance Optimization}{72}{subsection.B.8}%
+\contentsline {subsubsection}{\numberline {B.8.1}Vectorized Operations}{72}{subsubsection.B.8.1}%
+\contentsline {subsubsection}{\numberline {B.8.2}Memory-Efficient Algorithms}{73}{subsubsection.B.8.2}%
+\contentsline {subsection}{\numberline {B.9}Testing and Continuous Integration}{73}{subsection.B.9}%
